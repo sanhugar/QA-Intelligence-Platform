@@ -1,0 +1,26 @@
+{
+  "name": "qa-intelligence-platform",
+  "private": true,
+  "version": "0.0.0",
+  "description": "AI QA Intelligence Platform (ATI v2) — monorepo foundation",
+  "packageManager": "pnpm@9.15.0",
+  "engines": {
+    "node": ">=22.0.0",
+    "pnpm": ">=9.0.0"
+  },
+  "scripts": {
+    "dev:api": "pnpm --filter @ati/api dev",
+    "dev:worker": "pnpm --filter @ati/worker dev",
+    "dev:web": "pnpm --filter @ati/web dev",
+    "build": "pnpm -r --if-present run build",
+    "build:api": "pnpm --filter @ati/api build",
+    "build:worker": "pnpm --filter @ati/worker build",
+    "build:web": "pnpm --filter @ati/web build",
+    "lint": "pnpm -r --if-present run lint",
+    "typecheck": "pnpm -r --if-present run typecheck",
+    "test": "pnpm -r --if-present run test"
+  },
+  "devDependencies": {
+    "turbo": "^2.4.4"
+  }
+}

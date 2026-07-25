@@ -1,0 +1,48 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Builds
+dist/
+build/
+coverage/
+.turbo/
+*.tsbuildinfo
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+!.env.*.example
+*.pem
+*.key
+
+# Logs and local data
+logs/
+*.log
+.cache/
+tmp/
+temp/
+
+# IDE / OS
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json.example
+.DS_Store
+Thumbs.db
+
+# Test / runtime artifacts
+playwright-report/
+test-results/
+screenshots/
+
+# Infrastructure local state
+infrastructure/terraform/.terraform/
+infrastructure/terraform/*.tfstate*
+infrastructure/terraform/*.tfvars
+!infrastructure/terraform/*.tfvars.example
+
+# Database local
+*.db
+*.sqlite
