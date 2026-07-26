@@ -96,4 +96,11 @@ This baseline extends v2.3 with the Tenancy / Workspace Context Foundation while
 
 ## Next Planned Work
 
-Continue per the platform roadmap and [Implementation Roadmap & WBS](../implementation/IMPLEMENTATION_ROADMAP_AND_WBS.md). After Phase 2 Shared Infrastructure (WP-2.1–WP-2.4), the next planned critical-path package is **WP-3.1 — Intake Entry Workflow** (requires separate authorization).
+Continue per the platform roadmap and [Implementation Roadmap & WBS](../implementation/IMPLEMENTATION_ROADMAP_AND_WBS.md).
+
+| Order | Work Package | Status |
+|-------|--------------|--------|
+| Next | **WP-2.5 — Requirement Intelligence Engine Foundation** | Authorized (Shared Infrastructure extension; requires implementation) |
+| Then | **WP-3.1 — Intake Entry Workflow** | Not started (Phase 3 Knowledge Intake; separate authorization) |
+
+Identity lock: [WP Identity Architecture Decision](../implementation/WP_IDENTITY_ARCHITECTURE_DECISION.md).

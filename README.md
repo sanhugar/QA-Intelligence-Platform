@@ -11,9 +11,10 @@ Enterprise AI QA Knowledge Platform.
 - See [docs/architecture/ARCHITECTURE_BASELINE_STATUS.md](docs/architecture/ARCHITECTURE_BASELINE_STATUS.md).
 - ADRs 0001–0015 are the approved development baseline — no redesign via implementation.
 - Execution follows [docs/implementation/IMPLEMENTATION_ROADMAP_AND_WBS.md](docs/implementation/IMPLEMENTATION_ROADMAP_AND_WBS.md).
-- **WP-1.1–WP-2.3 complete** (WP-2.3 Independent Architecture Review APPROVED WITH OBSERVATIONS; closed). **WP-2.4 implemented** (Self Review / Independent Review pending).
-- WP-2.4: [Implementation Report](docs/implementation/WP-2.4_IMPLEMENTATION_REPORT.md) · [Deferred](docs/implementation/WP-2.4_DEFERRED_CAPABILITY_REGISTER.md) · [`@ati/context`](packages/context/README.md) · Workflow: [IMPLEMENTATION_WORKFLOW.md](docs/development/IMPLEMENTATION_WORKFLOW.md)
-- WP-2.3: [Implementation Report](docs/implementation/WP-2.3_IMPLEMENTATION_REPORT.md) · [Closeout](docs/implementation/WP-2.3_REPOSITORY_CLOSEOUT.md) · [Deferred](docs/implementation/WP-2.3_DEFERRED_CAPABILITY_REGISTER.md) · [Independent Review](docs/implementation/WP-2.3_INDEPENDENT_ARCHITECTURE_REVIEW.md) · [`@ati/observability`](packages/observability/README.md)
+- **WP-1.1–WP-2.4 complete** (Release Baseline v2.4). **WP-2.5 complete** — Requirement Intelligence Engine Foundation (governance closed; Release Baseline v2.5 pending).
+- **Identity:** WP-2.5 = Requirement Intelligence Engine Foundation · WP-3.1 = Intake Entry Workflow ([Identity Decision](docs/implementation/WP_IDENTITY_ARCHITECTURE_DECISION.md)).
+- WP-2.5: [Implementation Report](docs/implementation/WP-2.5_IMPLEMENTATION_REPORT.md) · [Closeout](docs/implementation/WP-2.5_REPOSITORY_CLOSEOUT.md) · [Git Readiness](docs/implementation/WP-2.5_GIT_READINESS_REVIEW.md) · [Deferred](docs/implementation/WP-2.5_DEFERRED_CAPABILITY_REGISTER.md) · [`@ati/requirement-engine`](packages/requirement-engine/README.md)
+- WP-2.4: [Implementation Report](docs/implementation/WP-2.4_IMPLEMENTATION_REPORT.md) · [Closeout](docs/implementation/WP-2.4_REPOSITORY_CLOSEOUT.md) · [Deferred](docs/implementation/WP-2.4_DEFERRED_CAPABILITY_REGISTER.md) · [`@ati/context`](packages/context/README.md) · [Release Baseline v2.4](docs/releases/RELEASE_BASELINE_v2.4.md)
 
 ## Start Here
 

@@ -14,5 +14,6 @@ Shared libraries consumed by apps. Keep packages small, pure where possible, and
 | `auth` | `@ati/auth` | AuthN/AuthZ foundation (JWT, claims, evaluator) |
 | `observability` | `@ati/observability` | Correlation, metrics/trace ports (Nest-free) |
 | `context` | `@ati/context` | Tenant/workspace execution context (Nest-free) |
+| `requirement-engine` | `@ati/requirement-engine` | Requirement Intelligence Engine Foundation (Nest-free) |
 
-**Rules:** no Nest/React/Express imports; no Domain invariants; Spine orchestration stays in `apps/*/src/spine`. Nest auth/observability/context middleware stay in `apps/*`.
+**Rules:** no Nest/React/Express imports; no Domain invariants; Spine orchestration stays in `apps/*/src/spine`. Nest auth/observability/context/requirement-engine host wiring stay in `apps/*`.

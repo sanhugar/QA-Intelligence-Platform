@@ -129,8 +129,10 @@ This roadmap is intentional sequencing for a 5–10 year platform. It does **not
 - Canonical WBS / build order: [IMPLEMENTATION_ROADMAP_AND_WBS.md](../implementation/IMPLEMENTATION_ROADMAP_AND_WBS.md)
 - Work Package SOP: [IMPLEMENTATION_WORKFLOW.md](../development/IMPLEMENTATION_WORKFLOW.md)
 - Organizes Phases 1–10 (Spine → Production readiness); does **not** redesign architecture
-- **WP-1.1–WP-2.3 complete** (WP-2.3 Independent Architecture Review APPROVED WITH OBSERVATIONS; closed) · **WP-2.4 not started**
-- WP-2.3 artifacts: [Implementation Report](../implementation/WP-2.3_IMPLEMENTATION_REPORT.md) · [Closeout](../implementation/WP-2.3_REPOSITORY_CLOSEOUT.md) · [Deferred](../implementation/WP-2.3_DEFERRED_CAPABILITY_REGISTER.md) · [Independent Review](../implementation/WP-2.3_INDEPENDENT_ARCHITECTURE_REVIEW.md)
+- **WP-1.1–WP-2.4 complete** (Release Baseline v2.4) · **WP-2.5 complete** (Requirement Intelligence Engine Foundation — governance closed; Release Baseline v2.5 pending)
+- **Identity lock:** WP-2.5 = Requirement Intelligence Engine Foundation · WP-3.1 = Intake Entry Workflow ([WP Identity Decision](../implementation/WP_IDENTITY_ARCHITECTURE_DECISION.md))
+- WP-2.4 artifacts: [Implementation Report](../implementation/WP-2.4_IMPLEMENTATION_REPORT.md) · [Closeout](../implementation/WP-2.4_REPOSITORY_CLOSEOUT.md) · [Deferred](../implementation/WP-2.4_DEFERRED_CAPABILITY_REGISTER.md) · [Release Baseline v2.4](../releases/RELEASE_BASELINE_v2.4.md)
+- WP-2.5 artifacts: [Implementation Report](../implementation/WP-2.5_IMPLEMENTATION_REPORT.md) · [Closeout](../implementation/WP-2.5_REPOSITORY_CLOSEOUT.md) · [Git Readiness](../implementation/WP-2.5_GIT_READINESS_REVIEW.md) · [Deferred](../implementation/WP-2.5_DEFERRED_CAPABILITY_REGISTER.md)
 
 ## Phase 1b — Platform Spine (implementation in progress)
 
@@ -141,7 +143,9 @@ This roadmap is intentional sequencing for a 5–10 year platform. It does **not
 - [x] Shared packages baseline (Foundation `@ati/*`) — WP-2.1
 - [x] AuthN/AuthZ baseline (OIDC foundation) — WP-2.2
 - [x] Observability baseline — WP-2.3
-- Knowledge Intake — later Phase 1/2 WPs
+- [x] Tenancy / workspace context baseline — WP-2.4
+- [x] Requirement Intelligence Engine Foundation — WP-2.5 (closed; Release Baseline v2.5 pending)
+- Knowledge Intake Entry — WP-3.1 (Phase 3; not started)
 - Detailed WBS: [IMPLEMENTATION_ROADMAP_AND_WBS.md](../implementation/IMPLEMENTATION_ROADMAP_AND_WBS.md)
 
 ## Phase 2 — Reasoning Engine Implementation

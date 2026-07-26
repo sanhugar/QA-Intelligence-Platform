@@ -182,6 +182,22 @@ Work packages are implementation packages — not task-level tickets. No APIs/sc
 | **Dependencies** | WP-2.1, WP-2.2 |
 | **Expected outcomes** | Context propagated to worker/AI runs |
 | **Completion criteria** | No cross-tenant context bleed in baseline tests |
+| **Implementation status** | **Complete** — Independent Architecture Review APPROVED WITH OBSERVATIONS — closed (Release Baseline v2.4) |
+| **Artifacts** | [WP-2.4_IMPLEMENTATION_REPORT.md](./WP-2.4_IMPLEMENTATION_REPORT.md) · [WP-2.4_DEFERRED_CAPABILITY_REGISTER.md](./WP-2.4_DEFERRED_CAPABILITY_REGISTER.md) · [WP-2.4_REPOSITORY_CLOSEOUT.md](./WP-2.4_REPOSITORY_CLOSEOUT.md) · [WP-2.4_INDEPENDENT_ARCHITECTURE_REVIEW.md](./WP-2.4_INDEPENDENT_ARCHITECTURE_REVIEW.md) |
+| **Process** | [IMPLEMENTATION_WORKFLOW.md](../development/IMPLEMENTATION_WORKFLOW.md) |
+
+#### WP-2.5 Requirement Intelligence Engine Foundation
+
+| Field | Content |
+|-------|---------|
+| **Purpose** | Nest-free requirement structural model, pipeline contracts, and engine lifecycle foundation (no AI, no parsers, no Intake product) |
+| **Dependencies** | WP-2.1–WP-2.4 (Shared Infrastructure: packages, auth, observability, context) |
+| **Expected outcomes** | `@ati/requirement-engine` foundation; format extension points; thin host harness |
+| **Completion criteria** | Model + pipeline contracts + lifecycle tests; zero persistence/AI/real parsers |
+| **Implementation status** | **Complete** — Independent Architecture Review APPROVED WITH OBSERVATIONS — closed (Git Readiness complete; Release Baseline v2.5 pending) |
+| **Identity** | Locked by [WP_IDENTITY_ARCHITECTURE_DECISION.md](./WP_IDENTITY_ARCHITECTURE_DECISION.md) — **not** WP-3.1 |
+| **Artifacts** | [WP-2.5_IMPLEMENTATION_REPORT.md](./WP-2.5_IMPLEMENTATION_REPORT.md) · [WP-2.5_DEFERRED_CAPABILITY_REGISTER.md](./WP-2.5_DEFERRED_CAPABILITY_REGISTER.md) · [WP-2.5_REPOSITORY_CLOSEOUT.md](./WP-2.5_REPOSITORY_CLOSEOUT.md) · [WP-2.5_GIT_READINESS_REVIEW.md](./WP-2.5_GIT_READINESS_REVIEW.md) · [WP-2.5_INDEPENDENT_ARCHITECTURE_REVIEW.md](./WP-2.5_INDEPENDENT_ARCHITECTURE_REVIEW.md) · [WP-2.5_SELF_REVIEW.md](./WP-2.5_SELF_REVIEW.md) · [WP-2.5_FINAL_PRE_IMPLEMENTATION_PLAN.md](./WP-2.5_FINAL_PRE_IMPLEMENTATION_PLAN.md) · [WP-2.5_IMPLEMENTATION_AUTHORIZATION.md](./WP-2.5_IMPLEMENTATION_AUTHORIZATION.md) |
+| **Process** | [IMPLEMENTATION_WORKFLOW.md](../development/IMPLEMENTATION_WORKFLOW.md) |
 
 *WP-2.x may proceed largely in parallel with late Phase 1 once WP-1.1 exists.*
 
@@ -194,9 +210,10 @@ Work packages are implementation packages — not task-level tickets. No APIs/sc
 | Field | Content |
 |-------|---------|
 | **Purpose** | Knowledge Intake entry under Orchestration ownership |
-| **Dependencies** | Phase 1–2 baselines; Orchestration Architecture |
+| **Dependencies** | Phase 1–2 baselines (including WP-2.5 when RIE structural types are required by Intake consumers); Orchestration Architecture (ADR 0011) |
 | **Expected outcomes** | Inputs registerable with identity/version/checksum metadata |
 | **Completion criteria** | Intake without inventing ARS; audit/lineage primitives present |
+| **Identity** | **Authoritative** — Intake Entry Workflow (not Requirement Intelligence Engine Foundation) |
 
 #### WP-3.2 Classification & Designation
 

@@ -112,10 +112,31 @@ Executable planning, Work Package reports, and deferred-capability registers.
 | [WP-2.4_DEFERRED_CAPABILITY_REGISTER.md](./WP-2.4_DEFERRED_CAPABILITY_REGISTER.md) | Deferred capabilities |
 | [../../packages/context/README.md](../../packages/context/README.md) | `@ati/context` package |
 
-**Status:** Implementation complete — Self Review / Independent Review pending.
+**Status:** Complete — Independent Architecture Review APPROVED WITH OBSERVATIONS — closed (Release Baseline v2.4).
+
+## WP-2.5 — Requirement Intelligence Engine Foundation
+
+| Document | Purpose |
+|----------|---------|
+| [WP_IDENTITY_ARCHITECTURE_DECISION.md](./WP_IDENTITY_ARCHITECTURE_DECISION.md) | Binding identity (WP-2.5 / WP-3.1) |
+| [WP-3.1_PRE_IMPLEMENTATION_PLAN.md](./WP-3.1_PRE_IMPLEMENTATION_PLAN.md) | Historical planning precursor (re-identified as WP-2.5) |
+| [WP-3.1_ARCHITECTURE_REVIEW.md](./WP-3.1_ARCHITECTURE_REVIEW.md) | Historical Architecture Review (identity resolved to WP-2.5) |
+| [WP-2.5_FINAL_PRE_IMPLEMENTATION_PLAN.md](./WP-2.5_FINAL_PRE_IMPLEMENTATION_PLAN.md) | Final pre-implementation plan |
+| [WP-2.5_IMPLEMENTATION_AUTHORIZATION.md](./WP-2.5_IMPLEMENTATION_AUTHORIZATION.md) | Implementation authorization |
+| [WP-2.5_ROADMAP_SYNCHRONIZATION_REPORT.md](./WP-2.5_ROADMAP_SYNCHRONIZATION_REPORT.md) | Roadmap / WBS synchronization |
+| [WP-2.5_IMPLEMENTATION_REPORT.md](./WP-2.5_IMPLEMENTATION_REPORT.md) | Implementation report |
+| [WP-2.5_DEFERRED_CAPABILITY_REGISTER.md](./WP-2.5_DEFERRED_CAPABILITY_REGISTER.md) | Deferred capabilities |
+| [WP-2.5_SELF_REVIEW.md](./WP-2.5_SELF_REVIEW.md) | Self review |
+| [WP-2.5_INDEPENDENT_ARCHITECTURE_REVIEW.md](./WP-2.5_INDEPENDENT_ARCHITECTURE_REVIEW.md) | Independent architecture review |
+| [WP-2.5_REPOSITORY_CLOSEOUT.md](./WP-2.5_REPOSITORY_CLOSEOUT.md) | Repository closeout |
+| [WP-2.5_GIT_READINESS_REVIEW.md](./WP-2.5_GIT_READINESS_REVIEW.md) | Git readiness review |
+| [../../packages/requirement-engine/README.md](../../packages/requirement-engine/README.md) | `@ati/requirement-engine` package |
+
+**Status:** Complete — Independent Architecture Review APPROVED WITH OBSERVATIONS — closed (Git Readiness complete; Release Baseline v2.5 pending).  
+**Identity:** WP-2.5 = RIE Foundation · WP-3.1 remains Intake Entry Workflow.
 
 ## Next
 
 | Work Package | Status |
 |--------------|--------|
-| WP-2.4 Tenancy / Workspace Context Baseline | Implemented (governance closeout pending) |
+| WP-3.1 Intake Entry Workflow | Not started (Phase 3) |

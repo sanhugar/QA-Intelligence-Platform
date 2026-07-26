@@ -3,13 +3,21 @@ import { HealthModule } from './health/health.module';
 import { ObservabilityModule } from './observability/observability.module';
 import { AuthModule } from './auth/auth.module';
 import { ContextModule } from './context/context.module';
+import { RequirementEngineModule } from './requirement-engine/requirement-engine.module';
 
 /**
  * API host root module.
  * Middleware registration order (WP-2.3 L3 + WP-2.4):
  * Observability (correlation) → Auth → Context.
+ * WP-2.5: RequirementEngineModule is harness-only (no HTTP middleware).
  */
 @Module({
-  imports: [HealthModule, ObservabilityModule, AuthModule, ContextModule],
+  imports: [
+    HealthModule,
+    ObservabilityModule,
+    AuthModule,
+    ContextModule,
+    RequirementEngineModule,
+  ],
 })
 export class AppModule {}

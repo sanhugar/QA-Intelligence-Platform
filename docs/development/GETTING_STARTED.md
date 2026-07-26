@@ -85,6 +85,13 @@ Correlation header: `x-correlation-id` (API accept/echo; worker HTTP mints).
 
 Non-authoritative client headers (never used as authority): `x-ati-tenant-id`, `x-ati-workspace-id`.
 
+### WP-2.5 — Requirement engine
+
+| Variable | Host | Notes |
+|----------|------|-------|
+| `ATI_REQUIREMENT_ENGINE_ENABLED` | both | Default true |
+| `ATI_REQUIREMENT_ENGINE_REGISTER_STUB` | both | Register test-only `stub` parser (default false) |
+
 ### WP-2.3 documentation
 
 | Document | Link |
