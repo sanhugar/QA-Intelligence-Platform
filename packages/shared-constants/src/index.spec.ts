@@ -10,6 +10,7 @@ describe('@ati/shared-constants', () => {
     expect(EnvKeys.REQUIREMENT_ENGINE_ENABLED).toBe('ATI_REQUIREMENT_ENGINE_ENABLED');
     expect(EnvKeys.INTAKE_ENABLED).toBe('ATI_INTAKE_ENABLED');
     expect(EnvKeys.CLASSIFICATION_ENABLED).toBe('ATI_CLASSIFICATION_ENABLED');
+    expect(EnvKeys.FEATURE_VERSION_ENABLED).toBe('ATI_FEATURE_VERSION_ENABLED');
     expect(HttpHeaders.CORRELATION_ID).toBe('x-correlation-id');
     expect(HttpHeaders.TENANT_ID).toBe('x-ati-tenant-id');
     expect(HttpHeaders.WORKSPACE_ID).toBe('x-ati-workspace-id');

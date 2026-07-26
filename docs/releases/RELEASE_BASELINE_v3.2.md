@@ -155,7 +155,7 @@ Prerequisite: Stable Development Baseline **v3.1** (tag `wp-3.1-complete` if not
 
 | Order | Work Package | Status |
 |-------|--------------|--------|
-| **Next** | **WP-3.3 — Feature Version & Lineage** | **Not started** |
+| **Next** | **WP-3.3 — Feature Version & Lineage** (`@ati/feature-version`) | **Repository Closed** — ready for Release Baseline v3.3 ([Git Readiness](../implementation/WP-3.3_GIT_READINESS_REVIEW.md)) |
 | Prior | WP-3.2 — Classification & Designation | Released by this baseline (pending Git operations) |
 | Prior | WP-3.1 — Intake Entry Workflow | Released — Baseline v3.1 |
 

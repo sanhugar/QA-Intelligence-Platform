@@ -6,6 +6,7 @@ import { ContextModule } from './context/context.module';
 import { RequirementEngineModule } from './requirement-engine/requirement-engine.module';
 import { IntakeModule } from './intake/intake.module';
 import { ClassificationModule } from './classification/classification.module';
+import { FeatureVersionModule } from './feature-version/feature-version.module';
 
 /**
  * API host root module.
@@ -14,6 +15,7 @@ import { ClassificationModule } from './classification/classification.module';
  * WP-2.5: RequirementEngineModule is harness-only (no HTTP middleware).
  * WP-3.1: IntakeModule is harness-only (no HTTP controllers).
  * WP-3.2: ClassificationModule is harness-only (no HTTP controllers).
+ * WP-3.3: FeatureVersionModule is harness-only (no HTTP controllers).
  */
 @Module({
   imports: [
@@ -24,6 +26,7 @@ import { ClassificationModule } from './classification/classification.module';
     RequirementEngineModule,
     IntakeModule,
     ClassificationModule,
+    FeatureVersionModule,
   ],
 })
 export class AppModule {}

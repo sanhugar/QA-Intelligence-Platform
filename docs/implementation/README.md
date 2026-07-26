@@ -169,14 +169,33 @@ Executable planning, Work Package reports, and deferred-capability registers.
 | [WP-3.2_IMPLEMENTATION_REPORT.md](./WP-3.2_IMPLEMENTATION_REPORT.md) | Implementation report |
 | [WP-3.2_DEFERRED_CAPABILITY_REGISTER.md](./WP-3.2_DEFERRED_CAPABILITY_REGISTER.md) | Deferred capability register |
 
-**Status:** **Implemented** — Self Review / Independent Review / Closeout / Release pending.  
+**Status:** **Released** — Stable Development Baseline **v3.2** ([RELEASE_BASELINE_v3.2.md](../releases/RELEASE_BASELINE_v3.2.md)).  
 **Package:** **`@ati/classification`** (`packages/classification`).  
 **Identity:** WP-3.2 = Classification & Designation.  
 **ARS standard:** `knowledge_role` metadata only (`ars_candidate` | `supporting` | `unknown`); product/gating deferred.
+
+## WP-3.3 — Feature Version & Lineage
+
+| Document | Purpose |
+|----------|---------|
+| [WP-3.3_PRE_IMPLEMENTATION_PLAN.md](./WP-3.3_PRE_IMPLEMENTATION_PLAN.md) | Pre-implementation plan |
+| [WP-3.3_ARCHITECTURE_REVIEW.md](./WP-3.3_ARCHITECTURE_REVIEW.md) | Architecture review |
+| [WP-3.3_FINAL_PRE_IMPLEMENTATION_PLAN.md](./WP-3.3_FINAL_PRE_IMPLEMENTATION_PLAN.md) | Final pre-implementation plan (D1–D8) |
+| [WP-3.3_IMPLEMENTATION_AUTHORIZATION.md](./WP-3.3_IMPLEMENTATION_AUTHORIZATION.md) | Implementation authorization (C1–C7) |
+| [WP-3.3_IMPLEMENTATION_REPORT.md](./WP-3.3_IMPLEMENTATION_REPORT.md) | Implementation report |
+| [WP-3.3_DEFERRED_CAPABILITY_REGISTER.md](./WP-3.3_DEFERRED_CAPABILITY_REGISTER.md) | Deferred capability register |
+| [WP-3.3_SELF_REVIEW.md](./WP-3.3_SELF_REVIEW.md) | Self review |
+| [WP-3.3_INDEPENDENT_ARCHITECTURE_REVIEW.md](./WP-3.3_INDEPENDENT_ARCHITECTURE_REVIEW.md) | Independent architecture review |
+| [WP-3.3_REPOSITORY_CLOSEOUT.md](./WP-3.3_REPOSITORY_CLOSEOUT.md) | Repository closeout |
+| [WP-3.3_GIT_READINESS_REVIEW.md](./WP-3.3_GIT_READINESS_REVIEW.md) | Git readiness review |
+
+**Status:** **Repository Closed** — Git Readiness complete; Release Baseline v3.3 pending.  
+**Package:** **`@ati/feature-version`** (`packages/feature-version`).  
+**Identity:** WP-3.3 = Feature Version & Lineage (primitives).  
 
 ## Next
 
 | Work Package | Status |
 |--------------|--------|
-| WP-3.2 Classification & Designation | Implemented — Self Review pending (`@ati/classification`) |
-| WP-3.3 Feature Version & Lineage Primitives | Not started |
+| WP-3.3 Feature Version & Lineage | Repository Closed — ready for Release Baseline v3.3 (`@ati/feature-version`) |
+| Phase 4 AI Runtime (WP-4.1+) | Not started |

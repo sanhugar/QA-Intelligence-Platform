@@ -24,5 +24,6 @@ module.exports = {
     '^@ati/requirement-engine$': '<rootDir>/../../packages/requirement-engine/src',
     '^@ati/intake$': '<rootDir>/../../packages/intake/src',
     '^@ati/classification$': '<rootDir>/../../packages/classification/src',
+    '^@ati/feature-version$': '<rootDir>/../../packages/feature-version/src',
   },
 };

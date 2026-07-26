@@ -6,6 +6,7 @@ import { WorkerContextModule } from './context/context.module';
 import { WorkerRequirementEngineModule } from './requirement-engine/requirement-engine.module';
 import { WorkerIntakeModule } from './intake/intake.module';
 import { WorkerClassificationModule } from './classification/classification.module';
+import { WorkerFeatureVersionModule } from './feature-version/feature-version.module';
 
 /**
  * Worker host root module.
@@ -14,6 +15,7 @@ import { WorkerClassificationModule } from './classification/classification.modu
  * WP-2.5: Requirement engine harness-only (no HTTP).
  * WP-3.1: Intake harness-only (no HTTP).
  * WP-3.2: Classification harness-only (no HTTP).
+ * WP-3.3: Feature Version harness-only (no HTTP).
  */
 @Module({
   imports: [
@@ -24,6 +26,7 @@ import { WorkerClassificationModule } from './classification/classification.modu
     WorkerRequirementEngineModule,
     WorkerIntakeModule,
     WorkerClassificationModule,
+    WorkerFeatureVersionModule,
   ],
 })
 export class AppModule {}

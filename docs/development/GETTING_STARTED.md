@@ -108,6 +108,14 @@ Package **`@ati/intake`**. See [Release Baseline v3.1](../releases/RELEASE_BASEL
 
 Package **`@ati/classification`**. See [WP-3.2 Implementation Report](../implementation/WP-3.2_IMPLEMENTATION_REPORT.md) · [Deferred Register](../implementation/WP-3.2_DEFERRED_CAPABILITY_REGISTER.md).
 
+### WP-3.3 — Feature Version & Lineage
+
+| Variable | Host | Notes |
+|----------|------|-------|
+| `ATI_FEATURE_VERSION_ENABLED` | both | Default true; disables resolve when false |
+
+Package **`@ati/feature-version`**. See [WP-3.3 Implementation Report](../implementation/WP-3.3_IMPLEMENTATION_REPORT.md) · [Deferred Register](../implementation/WP-3.3_DEFERRED_CAPABILITY_REGISTER.md).
+
 ### WP-2.3 documentation
 
 | Document | Link |

@@ -238,9 +238,14 @@ Work packages are implementation packages — not task-level tickets. No APIs/sc
 | Field | Content |
 |-------|---------|
 | **Purpose** | Feature Version aggregate and lineage hooks for reasoning runs |
-| **Dependencies** | WP-3.1 |
-| **Expected outcomes** | Reasoning runs correlatable to ARS identity/version |
-| **Completion criteria** | Lineage queryable for an intake→designation path |
+| **Dependencies** | WP-3.1 (`@ati/intake`); WP-3.2 (`@ati/classification`); WP-2.5 (`@ati/requirement-engine`); ADR 0011 |
+| **Expected outcomes** | Nest-free `@ati/feature-version`; `FeatureVersionResult` schema v1.0; deterministic identity/lineage |
+| **Completion criteria** | Deterministic derive; emit-only lineage; no Domain FV product / AI / persistence |
+| **Package** | **`@ati/feature-version`** (`packages/feature-version`) |
+| **Implementation status** | **Repository Closed** — Git Readiness complete; Release Baseline v3.3 pending ([WP-3.3_GIT_READINESS_REVIEW.md](./WP-3.3_GIT_READINESS_REVIEW.md)) |
+| **Identity** | **Authoritative** — Feature Version & Lineage |
+| **Artifacts** | [WP-3.3_GIT_READINESS_REVIEW.md](./WP-3.3_GIT_READINESS_REVIEW.md) · [WP-3.3_REPOSITORY_CLOSEOUT.md](./WP-3.3_REPOSITORY_CLOSEOUT.md) · [WP-3.3_INDEPENDENT_ARCHITECTURE_REVIEW.md](./WP-3.3_INDEPENDENT_ARCHITECTURE_REVIEW.md) · [WP-3.3_SELF_REVIEW.md](./WP-3.3_SELF_REVIEW.md) · [WP-3.3_IMPLEMENTATION_REPORT.md](./WP-3.3_IMPLEMENTATION_REPORT.md) · [WP-3.3_DEFERRED_CAPABILITY_REGISTER.md](./WP-3.3_DEFERRED_CAPABILITY_REGISTER.md) · [WP-3.3_IMPLEMENTATION_AUTHORIZATION.md](./WP-3.3_IMPLEMENTATION_AUTHORIZATION.md) · [WP-3.3_FINAL_PRE_IMPLEMENTATION_PLAN.md](./WP-3.3_FINAL_PRE_IMPLEMENTATION_PLAN.md) · [WP-3.3_ARCHITECTURE_REVIEW.md](./WP-3.3_ARCHITECTURE_REVIEW.md) · [WP-3.3_PRE_IMPLEMENTATION_PLAN.md](./WP-3.3_PRE_IMPLEMENTATION_PLAN.md) |
+| **Process** | [IMPLEMENTATION_WORKFLOW.md](../development/IMPLEMENTATION_WORKFLOW.md) |
 
 ---
 
