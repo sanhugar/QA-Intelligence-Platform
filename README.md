@@ -11,8 +11,8 @@ Enterprise AI QA Knowledge Platform.
 - See [docs/architecture/ARCHITECTURE_BASELINE_STATUS.md](docs/architecture/ARCHITECTURE_BASELINE_STATUS.md).
 - ADRs 0001–0015 are the approved development baseline — no redesign via implementation.
 - Execution follows [docs/implementation/IMPLEMENTATION_ROADMAP_AND_WBS.md](docs/implementation/IMPLEMENTATION_ROADMAP_AND_WBS.md).
-- **WP-1.1–WP-1.4 complete** (Independent Architecture Review approved for WP-1.4). **WP-2.x not started.**
-- WP-1.4: [Implementation Report](docs/implementation/WP-1.4_IMPLEMENTATION_REPORT.md) · [Closeout](docs/implementation/WP-1.4_CLOSEOUT_REPORT.md) · [Deferred](docs/implementation/WP-1.4_DEFERRED_CAPABILITY_REGISTER.md) · [Spine note](docs/engineering/PLATFORM_SPINE_WP-1.4.md) · Workflow: [IMPLEMENTATION_WORKFLOW.md](docs/development/IMPLEMENTATION_WORKFLOW.md)
+- **WP-1.1–WP-2.1 complete** (Independent Architecture Review approved for WP-2.1). **WP-2.2 not started.**
+- WP-2.1: [Implementation Report](docs/implementation/WP-2.1_IMPLEMENTATION_REPORT.md) · [Closeout](docs/implementation/WP-2.1_CLOSEOUT_REPORT.md) · [Deferred](docs/implementation/WP-2.1_DEFERRED_CAPABILITY_REGISTER.md) · [Final Plan](docs/implementation/WP-2.1_FINAL_PRE_IMPLEMENTATION_PLAN.md) · [Packages](packages/README.md) · Workflow: [IMPLEMENTATION_WORKFLOW.md](docs/development/IMPLEMENTATION_WORKFLOW.md)
 
 ## Start Here
 
@@ -36,10 +36,11 @@ Enterprise AI QA Knowledge Platform.
 | [docs/implementation/README.md](docs/implementation/README.md) | Implementation / WP reports index |
 | [docs/implementation/WP-1.2_IMPLEMENTATION_REPORT.md](docs/implementation/WP-1.2_IMPLEMENTATION_REPORT.md) | WP-1.2 implementation report |
 | [docs/implementation/WP-1.2_DEFERRED_CAPABILITY_REGISTER.md](docs/implementation/WP-1.2_DEFERRED_CAPABILITY_REGISTER.md) | WP-1.2 deferred capabilities |
-| [docs/implementation/WP-1.4_IMPLEMENTATION_REPORT.md](docs/implementation/WP-1.4_IMPLEMENTATION_REPORT.md) | WP-1.4 implementation report |
-| [docs/implementation/WP-1.4_DEFERRED_CAPABILITY_REGISTER.md](docs/implementation/WP-1.4_DEFERRED_CAPABILITY_REGISTER.md) | WP-1.4 deferred capabilities |
-| [docs/implementation/WP-1.4_CLOSEOUT_REPORT.md](docs/implementation/WP-1.4_CLOSEOUT_REPORT.md) | WP-1.4 closeout report |
-| [docs/engineering/PLATFORM_SPINE_WP-1.4.md](docs/engineering/PLATFORM_SPINE_WP-1.4.md) | WP-1.4 Spine delivery note |
+| [docs/implementation/WP-2.1_IMPLEMENTATION_REPORT.md](docs/implementation/WP-2.1_IMPLEMENTATION_REPORT.md) | WP-2.1 implementation report |
+| [docs/implementation/WP-2.1_DEFERRED_CAPABILITY_REGISTER.md](docs/implementation/WP-2.1_DEFERRED_CAPABILITY_REGISTER.md) | WP-2.1 deferred capabilities |
+| [docs/implementation/WP-2.1_CLOSEOUT_REPORT.md](docs/implementation/WP-2.1_CLOSEOUT_REPORT.md) | WP-2.1 closeout report |
+| [docs/implementation/WP-2.1_FINAL_PRE_IMPLEMENTATION_PLAN.md](docs/implementation/WP-2.1_FINAL_PRE_IMPLEMENTATION_PLAN.md) | WP-2.1 archived Final Pre-Implementation Plan |
+| [packages/README.md](packages/README.md) | Foundation shared packages index |
 | [docs/development/README.md](docs/development/README.md) | Development documentation index |
 | [docs/engineering/REQUIREMENT_UNDERSTANDING_ENGINE_SPECIFICATION.md](docs/engineering/REQUIREMENT_UNDERSTANDING_ENGINE_SPECIFICATION.md) | Requirement Understanding Engine eng spec (no code) |
 | [docs/engineering/REQUIREMENT_VALIDATION_ENGINE_SPECIFICATION.md](docs/engineering/REQUIREMENT_VALIDATION_ENGINE_SPECIFICATION.md) | Requirement Validation Engine eng spec — quality gate (no code) |

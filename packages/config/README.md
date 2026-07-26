@@ -1,5 +1,5 @@
 # @ati/config
 
-Environment/config loading utilities with schema validation.
+Environment/config loading helpers and base boot config loading.
 
-Apps extend a base schema; fail fast on invalid configuration at boot.
+Apps keep Spine `ConfigurationService` wrappers; pure parsing lives here.

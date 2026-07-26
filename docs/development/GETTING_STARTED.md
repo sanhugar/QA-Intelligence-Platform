@@ -6,7 +6,7 @@
 - pnpm 9+
 - Git
 
-Docker / Postgres / Redis are **not** required for WP-1.1–WP-1.4 host bootstraps.
+Docker / Postgres / Redis are **not** required for WP-1.1–WP-2.1 host bootstraps.
 
 ## Install
 
@@ -46,7 +46,7 @@ pnpm typecheck
 
 ## Current phase
 
-**WP-1.1–WP-1.4 complete** (Independent Architecture Review approved for WP-1.4). WP-2.x is not started.
+**WP-1.1–WP-2.1 complete** (Independent Architecture Review approved for WP-2.1). WP-2.2 is not started.
 
 ### What runs today
 
@@ -65,13 +65,14 @@ pnpm typecheck
 | `ATI_PLATFORM_VERSION` | both | Default `0.0.0` |
 | `ATI_FEATURE_FLAGS` | both | `key=true,other=false` |
 
-### WP-1.4 documentation
+### WP-2.1 documentation
 
 | Document | Link |
 |----------|------|
 | Implementation Workflow (SOP) | [IMPLEMENTATION_WORKFLOW.md](./IMPLEMENTATION_WORKFLOW.md) |
-| Implementation report | [WP-1.4_IMPLEMENTATION_REPORT.md](../implementation/WP-1.4_IMPLEMENTATION_REPORT.md) |
-| Deferred capabilities | [WP-1.4_DEFERRED_CAPABILITY_REGISTER.md](../implementation/WP-1.4_DEFERRED_CAPABILITY_REGISTER.md) |
-| Closeout report | [WP-1.4_CLOSEOUT_REPORT.md](../implementation/WP-1.4_CLOSEOUT_REPORT.md) |
-| Spine delivery note | [PLATFORM_SPINE_WP-1.4.md](../engineering/PLATFORM_SPINE_WP-1.4.md) |
+| Final Pre-Implementation Plan (archived) | [WP-2.1_FINAL_PRE_IMPLEMENTATION_PLAN.md](../implementation/WP-2.1_FINAL_PRE_IMPLEMENTATION_PLAN.md) |
+| Implementation report | [WP-2.1_IMPLEMENTATION_REPORT.md](../implementation/WP-2.1_IMPLEMENTATION_REPORT.md) |
+| Deferred capabilities | [WP-2.1_DEFERRED_CAPABILITY_REGISTER.md](../implementation/WP-2.1_DEFERRED_CAPABILITY_REGISTER.md) |
+| Closeout report | [WP-2.1_CLOSEOUT_REPORT.md](../implementation/WP-2.1_CLOSEOUT_REPORT.md) |
+| Packages index | [../../packages/README.md](../../packages/README.md) |
 | Implementation index | [../implementation/README.md](../implementation/README.md) |

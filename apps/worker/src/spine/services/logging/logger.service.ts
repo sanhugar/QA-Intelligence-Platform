@@ -1,6 +1,8 @@
+import { normalizeLogLevel, redact, shouldLog, type LogLevel } from '@ati/logger';
 import { SharedServiceError } from '../types';
 
-export type LogLevel = 'debug' | 'info' | 'warn' | 'error';
+export type { LogLevel };
+export { redact };
 
 export interface LoggerServiceOptions {
   host: string;
@@ -9,10 +11,9 @@ export interface LoggerServiceOptions {
   sink?: Pick<Console, 'log' | 'error' | 'warn'>;
 }
 
-const SENSITIVE_KEY = /(password|secret|token|authorization|api[_-]?key)/i;
-
 /**
  * Bootstrap-critical structured logger shell with redaction hooks.
+ * Level/redact helpers live in @ati/logger.
  */
 export class LoggerService {
   private initialized = false;
@@ -22,7 +23,7 @@ export class LoggerService {
   private sink: Pick<Console, 'log' | 'error' | 'warn'> = console;
 
   initialize(options: LoggerServiceOptions): void {
-    const level = normalizeLevel(options.logLevel ?? 'info');
+    const level = normalizeLogLevel(options.logLevel ?? 'info');
     if (!level) {
       throw new SharedServiceError('Invalid log level', 'LOGGER_INVALID');
     }
@@ -85,31 +86,4 @@ export class LoggerService {
       throw new SharedServiceError('Logger not initialized', 'LOGGER_NOT_INITIALIZED');
     }
   }
-}
-
-function normalizeLevel(value: string): LogLevel | null {
-  const v = value.trim().toLowerCase();
-  if (v === 'debug' || v === 'info' || v === 'warn' || v === 'error') {
-    return v;
-  }
-  return null;
-}
-
-function shouldLog(configured: LogLevel, level: LogLevel): boolean {
-  const order: LogLevel[] = ['debug', 'info', 'warn', 'error'];
-  return order.indexOf(level) >= order.indexOf(configured);
-}
-
-export function redact(fields: Record<string, unknown>): Record<string, unknown> {
-  const out: Record<string, unknown> = {};
-  for (const [key, value] of Object.entries(fields)) {
-    if (SENSITIVE_KEY.test(key)) {
-      out[key] = '[REDACTED]';
-    } else if (value && typeof value === 'object' && !Array.isArray(value)) {
-      out[key] = redact(value as Record<string, unknown>);
-    } else {
-      out[key] = value;
-    }
-  }
-  return out;
 }

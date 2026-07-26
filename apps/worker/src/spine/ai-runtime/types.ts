@@ -3,6 +3,8 @@
  * Execution context is limited to approved fields only (no user/tenant/auth).
  */
 
+import { AppError } from '@ati/errors';
+
 export type EngineInvocationStatus = 'completed' | 'failed';
 
 export interface EngineManifest {
@@ -36,12 +38,10 @@ export interface EngineInvocationResult {
   message?: string;
 }
 
-export class AiRuntimeError extends Error {
-  constructor(
-    message: string,
-    readonly code: string,
-  ) {
-    super(message);
+/** Host-specific AI Runtime error wrapping @ati/errors AppError. */
+export class AiRuntimeError extends AppError {
+  constructor(message: string, code: string) {
+    super(message, code);
     this.name = 'AiRuntimeError';
   }
 }

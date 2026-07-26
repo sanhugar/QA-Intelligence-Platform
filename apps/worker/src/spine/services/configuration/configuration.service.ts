@@ -1,13 +1,16 @@
+import { loadHostBootConfig, type HostBootConfig } from '@ati/config';
+import type { HostKind } from '@ati/shared-types';
 import { SharedServiceError, type HostConfiguration } from '../types';
 
 export interface ConfigurationServiceOptions {
-  host: 'api' | 'worker';
+  host: HostKind;
   env?: NodeJS.ProcessEnv;
 }
 
 /**
  * Bootstrap-critical configuration shell.
  * Fail-fast on invalid required config. No Domain behaviour.
+ * Pure parsing lives in @ati/config.
  */
 export class ConfigurationService {
   private config: HostConfiguration | null = null;
@@ -15,37 +18,24 @@ export class ConfigurationService {
   constructor(private readonly options: ConfigurationServiceOptions) {}
 
   initialize(): HostConfiguration {
-    const env = this.options.env ?? process.env;
-    const host = this.options.host;
-    const portKey = host === 'api' ? 'ATI_API_PORT' : 'ATI_WORKER_PORT';
-    const defaultPort = host === 'api' ? '3000' : '3001';
-    const port = Number(env[portKey] ?? defaultPort);
-
-    if (!Number.isFinite(port) || port <= 0) {
-      throw new SharedServiceError(`Invalid ${portKey}`, 'CONFIG_INVALID');
+    try {
+      this.config = loadHostBootConfig({
+        host: this.options.host,
+        env: this.options.env,
+      });
+      return this.config;
+    } catch (error) {
+      if (error instanceof SharedServiceError) {
+        throw error;
+      }
+      if (error instanceof Error && 'code' in error) {
+        throw new SharedServiceError(error.message, String((error as { code: string }).code));
+      }
+      throw new SharedServiceError(
+        error instanceof Error ? error.message : String(error),
+        'CONFIG_INVALID',
+      );
     }
-
-    const nodeEnv = (env.ATI_NODE_ENV ?? env.NODE_ENV ?? 'development').trim();
-    if (!nodeEnv) {
-      throw new SharedServiceError('ATI_NODE_ENV is required', 'CONFIG_INVALID');
-    }
-
-    const logLevel = (env.ATI_LOG_LEVEL ?? 'info').trim();
-    if (!logLevel) {
-      throw new SharedServiceError('ATI_LOG_LEVEL is required', 'CONFIG_INVALID');
-    }
-
-    const featureFlags = parseFeatureFlags(env.ATI_FEATURE_FLAGS);
-
-    this.config = {
-      host,
-      platformVersion: (env.ATI_PLATFORM_VERSION ?? '0.0.0').trim() || '0.0.0',
-      nodeEnv,
-      logLevel,
-      port,
-      featureFlags,
-    };
-    return this.config;
   }
 
   getConfig(): HostConfiguration {
@@ -56,27 +46,4 @@ export class ConfigurationService {
   }
 }
 
-function parseFeatureFlags(raw: string | undefined): Record<string, boolean> {
-  if (!raw || raw.trim() === '') {
-    return {};
-  }
-  const flags: Record<string, boolean> = {};
-  for (const part of raw.split(',')) {
-    const token = part.trim();
-    if (!token) {
-      continue;
-    }
-    const [key, value] = token.split('=');
-    if (!key?.trim()) {
-      throw new SharedServiceError(`Invalid ATI_FEATURE_FLAGS entry: ${token}`, 'CONFIG_INVALID');
-    }
-    if (value === undefined || value === 'true') {
-      flags[key.trim()] = true;
-    } else if (value === 'false') {
-      flags[key.trim()] = false;
-    } else {
-      throw new SharedServiceError(`Invalid ATI_FEATURE_FLAGS value for ${key}`, 'CONFIG_INVALID');
-    }
-  }
-  return flags;
-}
+export type { HostBootConfig };

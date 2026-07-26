@@ -146,7 +146,9 @@ Work packages are implementation packages — not task-level tickets. No APIs/sc
 | **Dependencies** | WP-1.1 |
 | **Expected outcomes** | Apps consume shared packages; no Domain leakage into UI |
 | **Completion criteria** | Package boundaries match Application Architecture; tests for shared utilities |
-| **Implementation status** | **Not started** — do not begin until separately authorized |
+| **Implementation status** | **Complete** — Independent Architecture Review approved — closed |
+| **Artifacts** | [WP-2.1_FINAL_PRE_IMPLEMENTATION_PLAN.md](./WP-2.1_FINAL_PRE_IMPLEMENTATION_PLAN.md) · [WP-2.1_IMPLEMENTATION_REPORT.md](./WP-2.1_IMPLEMENTATION_REPORT.md) · [WP-2.1_DEFERRED_CAPABILITY_REGISTER.md](./WP-2.1_DEFERRED_CAPABILITY_REGISTER.md) · [WP-2.1_CLOSEOUT_REPORT.md](./WP-2.1_CLOSEOUT_REPORT.md) |
+| **Process** | [IMPLEMENTATION_WORKFLOW.md](../development/IMPLEMENTATION_WORKFLOW.md) |
 
 #### WP-2.2 Identity & Access Baseline
 

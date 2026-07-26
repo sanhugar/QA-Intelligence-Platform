@@ -1,3 +1,3 @@
 # @ati/shared-constants
 
-Shared constants (header names, limits, topic names, stable string catalogs).
+Shared constants (env keys, default ports). Constants only.

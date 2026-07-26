@@ -55,10 +55,22 @@ Executable planning, Work Package reports, and deferred-capability registers.
 | [WP-1.4_CLOSEOUT_REPORT.md](./WP-1.4_CLOSEOUT_REPORT.md) | Project closeout report (Independent Review approved) |
 | [../engineering/PLATFORM_SPINE_WP-1.4.md](../engineering/PLATFORM_SPINE_WP-1.4.md) | Spine delivery note |
 
-**Status:** Complete — Independent Architecture Review approved — closed for Git commit. **WP-2.x not started.**
+**Status:** Complete — Independent Architecture Review approved — closed.
+
+## WP-2.1 — Shared Packages Baseline
+
+| Document | Purpose |
+|----------|---------|
+| [WP-2.1_FINAL_PRE_IMPLEMENTATION_PLAN.md](./WP-2.1_FINAL_PRE_IMPLEMENTATION_PLAN.md) | Archived approved Final Pre-Implementation Plan |
+| [WP-2.1_IMPLEMENTATION_REPORT.md](./WP-2.1_IMPLEMENTATION_REPORT.md) | Implementation report |
+| [WP-2.1_DEFERRED_CAPABILITY_REGISTER.md](./WP-2.1_DEFERRED_CAPABILITY_REGISTER.md) | Deferred capabilities |
+| [WP-2.1_CLOSEOUT_REPORT.md](./WP-2.1_CLOSEOUT_REPORT.md) | Project closeout report (Independent Review approved) |
+| [../../packages/README.md](../../packages/README.md) | Foundation packages index |
+
+**Status:** Complete — Independent Architecture Review approved — closed. **WP-2.2 not started.**
 
 ## Next
 
 | Work Package | Status |
 |--------------|--------|
-| WP-2.1 Shared Packages Baseline | Not started (requires separate authorization) |
+| WP-2.2 Identity & Access Baseline | Not started (requires separate authorization) |

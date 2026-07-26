@@ -1,12 +1,21 @@
 /** @type {import('jest').Config} */
 module.exports = {
   moduleFileExtensions: ['js', 'json', 'ts'],
-  rootDir: 'src',
-  testRegex: '.*\\.spec\\.ts$',
+  rootDir: '.',
+  testRegex: 'src/.*\\.spec\\.ts$',
   transform: {
     '^.+\\.(t|j)s$': 'ts-jest',
   },
-  collectCoverageFrom: ['**/*.(t|j)s'],
-  coverageDirectory: '../coverage',
+  collectCoverageFrom: ['src/**/*.(t|j)s'],
+  coverageDirectory: './coverage',
   testEnvironment: 'node',
+  moduleNameMapper: {
+    '^@ati/errors$': '<rootDir>/../../packages/errors/src',
+    '^@ati/shared-types$': '<rootDir>/../../packages/shared-types/src',
+    '^@ati/shared-constants$': '<rootDir>/../../packages/shared-constants/src',
+    '^@ati/shared-utils$': '<rootDir>/../../packages/shared-utils/src',
+    '^@ati/shared-validation$': '<rootDir>/../../packages/shared-validation/src',
+    '^@ati/config$': '<rootDir>/../../packages/config/src',
+    '^@ati/logger$': '<rootDir>/../../packages/logger/src',
+  },
 };

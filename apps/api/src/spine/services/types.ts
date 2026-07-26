@@ -1,3 +1,6 @@
+import { AppError } from '@ati/errors';
+import type { HostBootConfig } from '@ati/config';
+
 export type PlatformEventKind =
   | 'platform'
   | 'operational'
@@ -23,21 +26,13 @@ export interface ScheduleIntent {
   payload?: Record<string, unknown>;
 }
 
-export interface HostConfiguration {
-  host: 'api' | 'worker';
-  platformVersion: string;
-  nodeEnv: string;
-  logLevel: string;
-  port: number;
-  featureFlags: Record<string, boolean>;
-}
+/** Host boot configuration (shared shape from @ati/config). */
+export type HostConfiguration = HostBootConfig;
 
-export class SharedServiceError extends Error {
-  constructor(
-    message: string,
-    readonly code: string,
-  ) {
-    super(message);
+/** Host-specific shared-service error wrapping @ati/errors AppError. */
+export class SharedServiceError extends AppError {
+  constructor(message: string, code: string) {
+    super(message, code);
     this.name = 'SharedServiceError';
   }
 }
