@@ -1,0 +1,39 @@
+# Engineering Documentation Index
+
+Engineering specifications and delivery notes for ATI. These consume the frozen Architecture Baseline; they do not redefine architecture.
+
+## Platform Spine
+
+| Document | Purpose |
+|----------|---------|
+| [PLATFORM_SPINE_ENGINEERING_SPECIFICATION.md](./PLATFORM_SPINE_ENGINEERING_SPECIFICATION.md) | Canonical Spine eng spec |
+| [PLATFORM_REGISTRATION_DEPENDENCY_MATRIX.md](./PLATFORM_REGISTRATION_DEPENDENCY_MATRIX.md) | Bootstrap-only registration dependencies (WP-1.2) |
+| [PLATFORM_SPINE_WP-1.2.md](./PLATFORM_SPINE_WP-1.2.md) | WP-1.2 Spine delivery note |
+
+## Cross-cutting AI engineering
+
+| Document | Purpose |
+|----------|---------|
+| [AI_ENGINE_SPECIFICATION_FRAMEWORK.md](./AI_ENGINE_SPECIFICATION_FRAMEWORK.md) | Engine catalog & contracts |
+| [AI_ENGINE_DEVELOPMENT_AND_IMPLEMENTATION_STANDARDS.md](./AI_ENGINE_DEVELOPMENT_AND_IMPLEMENTATION_STANDARDS.md) | Implementation standards for all engines |
+| [AI_BENCHMARK_AND_GOLDEN_DATASET_FRAMEWORK.md](./AI_BENCHMARK_AND_GOLDEN_DATASET_FRAMEWORK.md) | Permanent AI evaluation gate |
+
+## Per-engine specifications
+
+| Document | Purpose |
+|----------|---------|
+| [REQUIREMENT_UNDERSTANDING_ENGINE_SPECIFICATION.md](./REQUIREMENT_UNDERSTANDING_ENGINE_SPECIFICATION.md) | Stage 1 |
+| [REQUIREMENT_VALIDATION_ENGINE_SPECIFICATION.md](./REQUIREMENT_VALIDATION_ENGINE_SPECIFICATION.md) | Stage 2 |
+| [KNOWLEDGE_RESOLUTION_ENGINE_SPECIFICATION.md](./KNOWLEDGE_RESOLUTION_ENGINE_SPECIFICATION.md) | Augmenting knowledge |
+| [REQUIREMENT_KNOWLEDGE_GRAPH_ENGINE_SPECIFICATION.md](./REQUIREMENT_KNOWLEDGE_GRAPH_ENGINE_SPECIFICATION.md) | Stage 3 |
+| [SCENARIO_REASONING_ENGINE_SPECIFICATION.md](./SCENARIO_REASONING_ENGINE_SPECIFICATION.md) | Stage 4 |
+| [SCENARIO_REVIEW_ENGINE_SPECIFICATION.md](./SCENARIO_REVIEW_ENGINE_SPECIFICATION.md) | Scenario QA gate |
+| [TEST_CASE_REASONING_ENGINE_SPECIFICATION.md](./TEST_CASE_REASONING_ENGINE_SPECIFICATION.md) | Stage 5 |
+| [TEST_CASE_REVIEW_ENGINE_SPECIFICATION.md](./TEST_CASE_REVIEW_ENGINE_SPECIFICATION.md) | Test case QA gate |
+| [COVERAGE_ANALYSIS_ENGINE_SPECIFICATION.md](./COVERAGE_ANALYSIS_ENGINE_SPECIFICATION.md) | Stage 7 |
+| [FINAL_QA_REVIEW_ENGINE_SPECIFICATION.md](./FINAL_QA_REVIEW_ENGINE_SPECIFICATION.md) | Stage 6 readiness |
+
+## Related
+
+- Implementation WBS & reports: [../implementation/](../implementation/)
+- Development SOP: [../development/IMPLEMENTATION_WORKFLOW.md](../development/IMPLEMENTATION_WORKFLOW.md)

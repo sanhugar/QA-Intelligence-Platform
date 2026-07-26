@@ -127,16 +127,19 @@ This roadmap is intentional sequencing for a 5–10 year platform. It does **not
 ## Implementation execution roadmap
 
 - Canonical WBS / build order: [IMPLEMENTATION_ROADMAP_AND_WBS.md](../implementation/IMPLEMENTATION_ROADMAP_AND_WBS.md)
+- Work Package SOP: [IMPLEMENTATION_WORKFLOW.md](../development/IMPLEMENTATION_WORKFLOW.md)
 - Organizes Phases 1–10 (Spine → Production readiness); does **not** redesign architecture
+- **WP-1.1 complete** · **WP-1.2 complete** (Independent Architecture Review approved) · **WP-1.3 not started**
+- WP-1.2 artifacts: [Implementation Report](../implementation/WP-1.2_IMPLEMENTATION_REPORT.md) · [Closeout](../implementation/WP-1.2_CLOSEOUT_REPORT.md) · [Deferred](../implementation/WP-1.2_DEFERRED_CAPABILITY_REGISTER.md) · [Registration Matrix](../engineering/PLATFORM_REGISTRATION_DEPENDENCY_MATRIX.md)
 
-## Phase 1b — Platform Spine (implementation — authorized to start)
+## Phase 1b — Platform Spine (implementation in progress)
 
-- App bootstraps (`web`, `api`, `worker`)
-- AuthN/AuthZ baseline (OIDC)
-- Observability baseline
-- Knowledge Intake + Approved Requirements Source / Feature Version aggregate + lineage primitives
-- Health/readiness endpoints only as needed for ops
-- Detailed WBS: Implementation Roadmap Phases 1–3
+- [x] App bootstraps (`web`, `api`, `worker`) — WP-1.1
+- [x] Platform registration & module shells — WP-1.2
+- [ ] Spine shared service shell — WP-1.3 (not authorized yet)
+- [ ] AI runtime host shell — WP-1.4
+- AuthN/AuthZ baseline (OIDC), observability baseline, Knowledge Intake — later Phase 1/2 WPs
+- Detailed WBS: [IMPLEMENTATION_ROADMAP_AND_WBS.md](../implementation/IMPLEMENTATION_ROADMAP_AND_WBS.md)
 
 ## Phase 2 — Reasoning Engine Implementation
 

@@ -6,11 +6,12 @@ Thank you for contributing. This repository is a greenfield enterprise platform.
 
 1. Read [AI_DEVELOPMENT_CHARTER.md](./AI_DEVELOPMENT_CHARTER.md) (roles, gates, rules).
 2. Read [CURSOR_DEVELOPMENT_CONTRACT.md](../development/CURSOR_DEVELOPMENT_CONTRACT.md) (mandatory for AI-assisted implementation).
-3. Read [ARCHITECTURE_BASELINE_STATUS.md](../architecture/ARCHITECTURE_BASELINE_STATUS.md) and [ARCHITECTURE.md](../architecture/ARCHITECTURE.md).
-4. Read [CODING_STANDARDS.md](./CODING_STANDARDS.md).
-5. Check [IMPLEMENTATION_ROADMAP_AND_WBS.md](../implementation/IMPLEMENTATION_ROADMAP_AND_WBS.md) and [ROADMAP.md](../roadmap/ROADMAP.md) so work aligns with the current phase/WP.
-6. For design changes, draft or update an ADR under `docs/adr/` and follow baseline freeze rules.
-7. Do not implement major features without architecture design approval / authorized WP.
+3. Read [IMPLEMENTATION_WORKFLOW.md](../development/IMPLEMENTATION_WORKFLOW.md) (mandatory SOP for every Work Package).
+4. Read [ARCHITECTURE_BASELINE_STATUS.md](../architecture/ARCHITECTURE_BASELINE_STATUS.md) and [ARCHITECTURE.md](../architecture/ARCHITECTURE.md).
+5. Read [CODING_STANDARDS.md](./CODING_STANDARDS.md).
+6. Check [IMPLEMENTATION_ROADMAP_AND_WBS.md](../implementation/IMPLEMENTATION_ROADMAP_AND_WBS.md) and [ROADMAP.md](../roadmap/ROADMAP.md) so work aligns with the current phase/WP.
+7. For design changes, draft or update an ADR under `docs/adr/` and follow baseline freeze rules.
+8. Do not implement major features without architecture design approval / authorized WP.
 
 ## Development Workflow
 

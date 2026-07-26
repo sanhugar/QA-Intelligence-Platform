@@ -11,7 +11,8 @@ Enterprise AI QA Knowledge Platform.
 - See [docs/architecture/ARCHITECTURE_BASELINE_STATUS.md](docs/architecture/ARCHITECTURE_BASELINE_STATUS.md).
 - ADRs 0001–0015 are the approved development baseline — no redesign via implementation.
 - Execution follows [docs/implementation/IMPLEMENTATION_ROADMAP_AND_WBS.md](docs/implementation/IMPLEMENTATION_ROADMAP_AND_WBS.md).
-- **WP-1.1 complete (hosts):** empty-but-runnable `web` / `api` / `worker` — see [Getting Started](docs/development/GETTING_STARTED.md) and [Deferred Capability Register](docs/implementation/WP-1.1_DEFERRED_CAPABILITY_REGISTER.md).
+- **WP-1.1 + WP-1.2 complete** (Independent Architecture Review approved for WP-1.2). WP-1.3 not started.
+- Closeout: [WP-1.2_CLOSEOUT_REPORT.md](docs/implementation/WP-1.2_CLOSEOUT_REPORT.md) · Report: [WP-1.2_IMPLEMENTATION_REPORT.md](docs/implementation/WP-1.2_IMPLEMENTATION_REPORT.md) · Matrix: [PLATFORM_REGISTRATION_DEPENDENCY_MATRIX.md](docs/engineering/PLATFORM_REGISTRATION_DEPENDENCY_MATRIX.md) · Workflow: [IMPLEMENTATION_WORKFLOW.md](docs/development/IMPLEMENTATION_WORKFLOW.md)
 
 ## Start Here
 
@@ -30,6 +31,12 @@ Enterprise AI QA Knowledge Platform.
 | [docs/engineering/AI_ENGINE_DEVELOPMENT_AND_IMPLEMENTATION_STANDARDS.md](docs/engineering/AI_ENGINE_DEVELOPMENT_AND_IMPLEMENTATION_STANDARDS.md) | Canonical implementation standard for all AI engines (no code) |
 | [docs/engineering/AI_BENCHMARK_AND_GOLDEN_DATASET_FRAMEWORK.md](docs/engineering/AI_BENCHMARK_AND_GOLDEN_DATASET_FRAMEWORK.md) | Permanent AI engine evaluation / golden dataset quality gate (no code) |
 | [docs/engineering/PLATFORM_SPINE_ENGINEERING_SPECIFICATION.md](docs/engineering/PLATFORM_SPINE_ENGINEERING_SPECIFICATION.md) | Platform Spine runtime engineering spec (no code) |
+| [docs/engineering/README.md](docs/engineering/README.md) | Engineering documentation index |
+| [docs/engineering/PLATFORM_REGISTRATION_DEPENDENCY_MATRIX.md](docs/engineering/PLATFORM_REGISTRATION_DEPENDENCY_MATRIX.md) | Bootstrap-only module registration dependency matrix |
+| [docs/implementation/README.md](docs/implementation/README.md) | Implementation / WP reports index |
+| [docs/implementation/WP-1.2_IMPLEMENTATION_REPORT.md](docs/implementation/WP-1.2_IMPLEMENTATION_REPORT.md) | WP-1.2 implementation report |
+| [docs/implementation/WP-1.2_DEFERRED_CAPABILITY_REGISTER.md](docs/implementation/WP-1.2_DEFERRED_CAPABILITY_REGISTER.md) | WP-1.2 deferred capabilities |
+| [docs/development/README.md](docs/development/README.md) | Development documentation index |
 | [docs/engineering/REQUIREMENT_UNDERSTANDING_ENGINE_SPECIFICATION.md](docs/engineering/REQUIREMENT_UNDERSTANDING_ENGINE_SPECIFICATION.md) | Requirement Understanding Engine eng spec (no code) |
 | [docs/engineering/REQUIREMENT_VALIDATION_ENGINE_SPECIFICATION.md](docs/engineering/REQUIREMENT_VALIDATION_ENGINE_SPECIFICATION.md) | Requirement Validation Engine eng spec — quality gate (no code) |
 | [docs/engineering/KNOWLEDGE_RESOLUTION_ENGINE_SPECIFICATION.md](docs/engineering/KNOWLEDGE_RESOLUTION_ENGINE_SPECIFICATION.md) | Knowledge Resolution Engine eng spec — augmenting only (no code) |
@@ -48,6 +55,7 @@ Enterprise AI QA Knowledge Platform.
 | [docs/architecture/ENTERPRISE_DATA_ARCHITECTURE.md](docs/architecture/ENTERPRISE_DATA_ARCHITECTURE.md) | Enterprise Information Model (EIM) |
 | [docs/standards/AI_DEVELOPMENT_CHARTER.md](docs/standards/AI_DEVELOPMENT_CHARTER.md) | Roles, gates, development rules |
 | [docs/development/CURSOR_DEVELOPMENT_CONTRACT.md](docs/development/CURSOR_DEVELOPMENT_CONTRACT.md) | Permanent AI coding-assistant implementation contract |
+| [docs/development/IMPLEMENTATION_WORKFLOW.md](docs/development/IMPLEMENTATION_WORKFLOW.md) | Mandatory SOP for every Work Package implementation |
 | [docs/standards/CODING_STANDARDS.md](docs/standards/CODING_STANDARDS.md) | Naming, testing, git, logging |
 | [docs/standards/CONTRIBUTION.md](docs/standards/CONTRIBUTION.md) | How to contribute |
 | [docs/roadmap/ROADMAP.md](docs/roadmap/ROADMAP.md) | Capability phases |

@@ -21,6 +21,7 @@ Related governance (consumed, not replaced):
 - [AI Development Charter](../standards/AI_DEVELOPMENT_CHARTER.md) — roles and platform development rules  
 - [ARCHITECTURE_BASELINE_STATUS.md](../architecture/ARCHITECTURE_BASELINE_STATUS.md) — BASELINE FROZEN; Implementation Authorized  
 - [IMPLEMENTATION_ROADMAP_AND_WBS.md](../implementation/IMPLEMENTATION_ROADMAP_AND_WBS.md) — build order  
+- [IMPLEMENTATION_WORKFLOW.md](./IMPLEMENTATION_WORKFLOW.md) — mandatory Work Package SOP (plan → approve → implement → review → commit)  
 
 **Conflict rule:** Architecture Baseline and ADRs win on meaning; this Contract wins on AI-assisted implementation behaviour; Charter defines human/AI role authority.
 

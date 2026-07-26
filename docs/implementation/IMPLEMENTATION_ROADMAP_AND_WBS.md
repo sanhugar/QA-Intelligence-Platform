@@ -106,15 +106,19 @@ Work packages are implementation packages — not task-level tickets. No APIs/sc
 | **Dependencies** | WP-1.1 |
 | **Expected outcomes** | Discoverable registered units; disabled-by-default unused capabilities |
 | **Completion criteria** | Registration documented; no ad hoc wiring required for next phases |
+| **Implementation status** | **Complete** — Independent Architecture Review approved — closed |
+| **Artifacts** | [WP-1.2_IMPLEMENTATION_REPORT.md](./WP-1.2_IMPLEMENTATION_REPORT.md) · [WP-1.2_DEFERRED_CAPABILITY_REGISTER.md](./WP-1.2_DEFERRED_CAPABILITY_REGISTER.md) · [WP-1.2_CLOSEOUT_REPORT.md](./WP-1.2_CLOSEOUT_REPORT.md) · [PLATFORM_REGISTRATION_DEPENDENCY_MATRIX.md](../engineering/PLATFORM_REGISTRATION_DEPENDENCY_MATRIX.md) · [PLATFORM_SPINE_WP-1.2.md](../engineering/PLATFORM_SPINE_WP-1.2.md) |
+| **Process** | [IMPLEMENTATION_WORKFLOW.md](../development/IMPLEMENTATION_WORKFLOW.md) |
 
 #### WP-1.3 Spine Shared Service Shell
 
 | Field | Content |
 |-------|---------|
 | **Purpose** | Initialize config, diagnostics, event, scheduling, feature-flag, audit-support abstractions |
-| **Dependencies** | WP-1.1 |
+| **Dependencies** | WP-1.1 (registration from WP-1.2 recommended before shared-service consumers) |
 | **Expected outcomes** | Shared services available to modules without Domain logic |
 | **Completion criteria** | Spine eng spec shell responsibilities met; independently testable |
+| **Implementation status** | **Not started** — do not begin until separately authorized |
 
 #### WP-1.4 AI Runtime Host Shell
 

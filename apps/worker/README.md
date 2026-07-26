@@ -1,26 +1,34 @@
 # apps/worker
 
-NestJS Worker host for ATI background processing (bootstrap only).
+NestJS Worker host for ATI background processing.
 
-**Work package:** WP-1.1 — Application Host Bootstraps  
-**Status:** Empty-but-runnable host (liveness/readiness only)
+**Status:** WP-1.1 hosts + WP-1.2 Platform Registration (**complete**; independent host-local copy — no shared package)
 
 ## Run
 
 ```bash
-# from repository root
 pnpm --filter @ati/worker dev
 ```
 
 Default port: `3001` (`ATI_WORKER_PORT`).
 
-The HTTP listener exists solely so this host can expose liveness/readiness independently. No BullMQ/Redis/job processors are registered in WP-1.1.
+On startup the host runs the same Platform Spine registration model as `api`. No BullMQ/Redis/job processors.
 
-## Health (host-local NestJS routes)
+## Health
 
 - Liveness: `GET /health/live`
-- Readiness: `GET /health/ready`
+- Readiness: `GET /health/ready` (boolean readiness only)
 
-## Out of scope (WP-1.1)
+## WP-1.2 references
 
-Job processors, Redis, BullMQ, AI runtime, workflows, business modules.
+| Document | Link |
+|----------|------|
+| Spine delivery note | [PLATFORM_SPINE_WP-1.2.md](../../docs/engineering/PLATFORM_SPINE_WP-1.2.md) |
+| Registration matrix | [PLATFORM_REGISTRATION_DEPENDENCY_MATRIX.md](../../docs/engineering/PLATFORM_REGISTRATION_DEPENDENCY_MATRIX.md) |
+| Implementation report | [WP-1.2_IMPLEMENTATION_REPORT.md](../../docs/implementation/WP-1.2_IMPLEMENTATION_REPORT.md) |
+| Deferred capabilities | [WP-1.2_DEFERRED_CAPABILITY_REGISTER.md](../../docs/implementation/WP-1.2_DEFERRED_CAPABILITY_REGISTER.md) |
+| Implementation workflow | [IMPLEMENTATION_WORKFLOW.md](../../docs/development/IMPLEMENTATION_WORKFLOW.md) |
+
+## Out of scope (deferred)
+
+Job processors, AI runtime, shared packages, business behaviour — see Deferred Capability Register.

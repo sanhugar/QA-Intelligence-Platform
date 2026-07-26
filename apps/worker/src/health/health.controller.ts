@@ -1,9 +1,9 @@
-import { Controller, Get, HttpCode, HttpStatus } from '@nestjs/common';
+import { Controller, Get, HttpCode, HttpStatus, ServiceUnavailableException } from '@nestjs/common';
+import { platformReadiness } from '../spine/registration/platform-readiness';
 
 /**
  * Host liveness and readiness probes for the Worker process.
- * Route paths follow NestJS controller conventions for this host only —
- * not an architectural contract for other hosts or future modules.
+ * Readiness is a boolean only — registration details are not exposed (WP-1.2).
  */
 @Controller('health')
 export class HealthController {
@@ -14,8 +14,10 @@ export class HealthController {
   }
 
   @Get('ready')
-  @HttpCode(HttpStatus.OK)
   ready(): { status: 'ok' } {
+    if (!platformReadiness.isReady()) {
+      throw new ServiceUnavailableException({ status: 'not_ready' });
+    }
     return { status: 'ok' };
   }
 }

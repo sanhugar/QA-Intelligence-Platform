@@ -46,4 +46,22 @@ pnpm typecheck
 
 ## Current phase
 
-**WP-1.1** — Application Host Bootstraps. See [IMPLEMENTATION_ROADMAP_AND_WBS.md](../implementation/IMPLEMENTATION_ROADMAP_AND_WBS.md) and [WP-1.1_DEFERRED_CAPABILITY_REGISTER.md](../implementation/WP-1.1_DEFERRED_CAPABILITY_REGISTER.md).
+**WP-1.1 + WP-1.2 complete.** Next authorized Work Package is not started (WP-1.3 requires separate authorization).
+
+### What runs today
+
+- On boot, `api` and `worker` run Platform Spine module registration before listening.
+- Readiness (`/health/ready`) is OK only after successful registration (boolean only; no module list in health responses).
+
+### WP-1.2 documentation
+
+| Document | Link |
+|----------|------|
+| Implementation Workflow (SOP) | [IMPLEMENTATION_WORKFLOW.md](./IMPLEMENTATION_WORKFLOW.md) |
+| Registration dependency matrix | [PLATFORM_REGISTRATION_DEPENDENCY_MATRIX.md](../engineering/PLATFORM_REGISTRATION_DEPENDENCY_MATRIX.md) |
+| Implementation report | [WP-1.2_IMPLEMENTATION_REPORT.md](../implementation/WP-1.2_IMPLEMENTATION_REPORT.md) |
+| Deferred capabilities | [WP-1.2_DEFERRED_CAPABILITY_REGISTER.md](../implementation/WP-1.2_DEFERRED_CAPABILITY_REGISTER.md) |
+| Closeout report | [WP-1.2_CLOSEOUT_REPORT.md](../implementation/WP-1.2_CLOSEOUT_REPORT.md) |
+| Spine delivery note | [PLATFORM_SPINE_WP-1.2.md](../engineering/PLATFORM_SPINE_WP-1.2.md) |
+| Implementation index | [../implementation/README.md](../implementation/README.md) |
+
