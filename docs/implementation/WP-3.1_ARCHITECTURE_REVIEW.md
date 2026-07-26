@@ -1,180 +1,232 @@
 # WP-3.1_ARCHITECTURE_REVIEW.md
-## Architecture Review — Requirement Intelligence Engine Foundation
+## Architecture Review — Intake Entry Workflow
 
-**Work Package (as proposed):** WP-3.1 — Requirement Intelligence Engine Foundation  
-**Role:** Independent Principal Enterprise Architect (Architecture Review)  
+**Work Package:** WP-3.1 — Intake Entry Workflow  
+**Role:** Independent ATI Platform Architecture Review Board  
 **Date:** 2026-07-26  
 **Input:** [WP-3.1_PRE_IMPLEMENTATION_PLAN.md](./WP-3.1_PRE_IMPLEMENTATION_PLAN.md)  
-**Platform baseline:** Stable Development Baseline **v2.4**  
-**Implementation:** Not authorized  
+**Platform baseline:** Stable Development Baseline **v2.5** ([RELEASE_BASELINE_v2.5.md](../releases/RELEASE_BASELINE_v2.5.md))  
+**Implementation:** **Not authorized**
 
-**Independence:** Reviewer did not author the Pre-Implementation Plan.
+**Independence:** Reviewer did not author the Pre-Implementation Plan.  
+**Identity lock:** WP-3.1 = Intake Entry · WP-2.5 = RIE Foundation ([WP_IDENTITY_ARCHITECTURE_DECISION.md](./WP_IDENTITY_ARCHITECTURE_DECISION.md)).
+
+**Historical note:** A prior file at this path reviewed RIE Foundation and was relocated to [WP-2.5_ARCHITECTURE_REVIEW.md](./WP-2.5_ARCHITECTURE_REVIEW.md).
 
 ---
 
 ## Executive Summary
 
-The proposed **Requirement Intelligence Engine Foundation** is **architecturally sound** as a Nest-free, technology-neutral structural substrate: model types, pipeline ports, engine lifecycle, and thin coexistence with Auth / Observability / Context. Scope control correctly excludes AI/LLM, embeddings, parser implementations, scenario/test generation, and persistence. Alignment with Platform Spine and Shared Infrastructure packaging patterns is acceptable.
+The proposed **Intake Entry Workflow** is **architecturally sound** as a Phase 3 Orchestration-owned **Entry** capability: thin lifecycle orchestration over `@ati/requirement-engine`, format-catalog validation without parsing, source registration with identity/version/checksum, status tracking, and reuse of Auth / Context / Observability — without persistence, AI, ARS designation, or duplication of WP-2.5 model/ports.
 
-The mismatch with the canonical roadmap is **not a mere naming typo**. Canonical WBS **WP-3.1** is *Intake Entry Workflow* (Phase 3 Knowledge Intake). ATI architecture (ADR 0011; Blueprint build order) establishes **Knowledge Intake as the universal entry** before generation/analysis engines. Occupying the WP-3.1 slot with an RIE foundation without a formal WBS update would create a **sequencing / identity conflict**, not a Spine layering violation.
+ADR 0011 is respected by capping scope to the **Entry** slice of Knowledge Intake (not the full §4.1 classify → designate → route workflow). Platform Spine ownership is preserved. Shared Infrastructure boundaries are preserved: parsers remain on WP-2.5 ports for later format WPs; classification/ARS remain WP-3.2; Feature Version/lineage remain WP-3.3.
 
-**Classification of the planning observation:** **Work package sequencing issue** (with a naming symptom). **Not** a genuine conflict with Spine/Auth/Obs/Context designs. **Not** resolvable by silently renaming the roadmap title alone while leaving Intake Entry without an ID.
+**Missing-parser behaviour:** Option **O1 — `accepted_pending_parser`** is **adopted as the architectural standard** for WP-3.1 (see § Missing Parser Decision).
+
+Residual items (exact host HTTP surface, idempotency tuple literal, package README naming polish) belong in Final Pre-Implementation Plan / Authorization — they do **not** require architecture revision.
 
 **Final Verdict:** **APPROVED WITH OBSERVATIONS**
 
-Technical design may proceed to Architecture Decision Resolution **only after** the WBS identity / sequencing observation is locked. Do not authorize implementation under an ambiguous WP-3.1 identity.
+---
+
+## Architecture Assessment
+
+| Dimension | Assessment |
+|-----------|------------|
+| Problem framing | **Sound** — first business capability on RIE foundation; Entry ≠ Understanding ≠ Designation |
+| Orchestration vs engine split | **Sound** — intake owns request/status/audit; engine owns structure/ports/lifecycle |
+| Scope control | **Strong** — parsers/AI/persistence/ARS/generation explicitly excluded |
+| ADR 0011 Entry subset | **Sound** — correctly refuses full §4.1 absorption into WP-3.1 |
+| Dependency on v2.5 | **Adequate** — Auth, Obs, Context, `@ati/requirement-engine` available |
+| Premature productization risk | **Managed** — in-memory registry; harness/minimal surface preferred |
+| Identity clarity | **Pass** — WP-3.1 no longer contested with RIE |
+
+**Challenge — sequencing language in some external prompts:** Framing “parser framework as WP-3.2” or “normalization as WP-3.3” **conflicts** with the locked WBS (WP-3.2 = Classification & Designation; WP-3.3 = Feature Version & Lineage). This review **rejects** that remapping. Parser implementations remain **later format / Shared Infrastructure WPs** consuming WP-2.5 ports. Normalization port already exists in WP-2.5 as a contract (`NormalizePort`); WP-3.1 must not re-own it.
 
 ---
 
-## 1. Architecture Assessment
+## Boundary Verification
 
-| Concern | Assessment | Result |
-|---------|------------|--------|
-| **Platform Spine** | Plan consumes host lifecycle; does not redesign boot/READY; correctly avoids Brain engine registration in this WP | Pass |
-| **Shared Packages** | Dedicated Nest-free `@ati/*` package pattern matches WP-2.x; public API via `index.ts` | Pass |
-| **Authentication (WP-2.2)** | Foundation is not AuthZ; host probes would coexist with deny-by-default / exact public routes | Pass |
-| **Observability (WP-2.3)** | Correlation carry-through; forbids requirement-body metric labels — correct | Pass |
-| **Context (WP-2.4)** | Tenant/workspace propagation on invoke; no silent cross-tenant merge | Pass |
-| **Layering** | Package Nest/Domain-persistence-free; Nest only in hosts | Pass |
-| **ADR 0011 Intake ownership** | Plan correctly does **not** claim ARS designation; accepts opaque Source References | Pass |
-| **Requirement Understanding Spec** | Plan positions itself as structural substrate, not Stage 1 AI engine | Pass |
-| **Blueprint order** | Structural types before analysis are fine; claiming Phase-3.1 Intake slot is not | Observation (see Roadmap) |
+| Requirement | Result | Notes |
+|-------------|--------|-------|
+| Orchestrates Requirement Engine | **Pass** | Invoke facade; map outcomes to intake status |
+| Does not duplicate WP-2.5 functionality | **Pass** | No competing `Requirement*` aggregate or port reimplementation |
+| Does not introduce parser logic | **Pass** | Format catalog membership only |
+| Does not introduce AI | **Pass** | Explicit non-goal |
+| Does not introduce persistence | **Pass** | In-memory intake records for this WP |
+| Does not invent / designate ARS | **Pass** | Deferred to WP-3.2 |
+| Does not use stub as product parser | **Pass** | Forbidden on product intake paths |
 
-**Engine architecture**
-
-| Element | Review |
-|---------|--------|
-| Engine boundaries | Clear: ports + assemble + result; no LLM port — Pass |
-| Public contracts | Facade + model exports — appropriate for foundation |
-| Internal interfaces | Parse / Normalize / Assemble stages — technology-neutral — Pass |
-| Requirement model | Requirement / Section / Fragment / Metadata / Source Reference — neutral; must not be treated as Domain SoT or ARS — Pass with observation |
-| Pipeline extension points | Registry keys for Markdown/FDD/PRD/User Story without implementations — Pass |
-
-**Technology neutrality:** Confirmed for the proposed model and ports (no Prisma, no provider SDKs, no vector stores).
-
-**Layering violations:** None identified in the technical proposal.
+**Boundary residual risk:** Over-eager “engine orchestration” that embeds parse heuristics in intake validators. **Mitigation:** validators check declared format key + checksum/schema only; content inspection beyond length/encoding gates (if any) must not become a shadow parser — lock in Final Plan.
 
 ---
 
-## 2. Scope Assessment
+## Layering Verification
 
-| Required inclusion | Plan | Result |
-|--------------------|------|--------|
-| Engine foundation | Yes | Pass |
-| Domain-compatible structural model (not Domain product) | Yes — technology-neutral types | Pass |
-| Pipeline contracts / extension points | Yes | Pass |
-| Lifecycle | Yes | Pass |
+| Constraint | Result |
+|------------|--------|
+| ADR 0011 (thin orchestrator; Knowledge Intake entry) | **Pass** — Entry slice only |
+| Platform Spine (no boot/READY ownership change) | **Pass** |
+| Shared Infrastructure boundaries | **Pass** — consumes `@ati/requirement-engine`; does not absorb it |
+| Phase 3 Business Capability responsibilities | **Pass** — first Orchestration workflow capability |
+| Dependency inversion (workflow → engine, not reverse) | **Pass** |
+| Technology neutrality | **Pass** — Nest-free workflow core preferred |
 
-| Required exclusion | Plan | Result |
-|--------------------|------|--------|
-| AI / LLM | Explicitly out | Pass |
-| Embeddings / vector DB / search | Explicitly out | Pass |
-| Parsing implementations | Ports only | Pass |
-| Scenario generation | Explicitly out | Pass |
-| Test case generation | Explicitly out | Pass |
-| Persistence / migrations | Explicitly out | Pass |
-| Intake entry / ARS designation | Explicitly out | Pass |
+### Package placement (locked recommendation)
 
-**Hidden product features:** None detected. Scope discipline is strong.
+| Decision | Lock |
+|----------|------|
+| Package | **`packages/intake` → `@ati/intake`** (Nest-free workflow core) |
+| Hosts | Thin `apps/api` and/or `apps/worker` wiring only |
+| HTTP Domain product APIs | **Not required** for WP-3.1; default **harness / internal invoke**; any probe must not invent ARS or parse |
 
-**Observation:** Naming the aggregate type `Requirement` must remain subordinate to Approved Requirements Source and future Domain Requirement Object semantics — foundation scaffolding must not imply authority over product truth.
+Final Plan may refine module filenames; package identity **`@ati/intake`** is the Architecture Review preference and should be treated as the default lock unless Authorization records an equivalent rename with rationale.
 
 ---
 
-## 3. Dependency Assessment
+## Workflow Design Assessment
 
-| Future capability | Relationship to this foundation | Order implication |
-|-------------------|---------------------------------|-------------------|
-| **Knowledge Intake / ARS designation** | Produces Source References / bundles the foundation later consumes | Intake product remains required before generation authority; foundation types may exist earlier |
-| **Requirement Understanding (Stage 1 AI)** | Consumer of structured model + evidence contracts | After foundation (+ Intake designation for real runs) |
-| **Scenario Intelligence** | Depends on validated requirement understanding / baselines | Downstream of understanding/validation — **not** blocked incorrectly by foundation-first types |
-| **Test Design** | Depends on scenarios / requirement baselines | Downstream |
-| **Coverage Planner** | Depends on requirement–scenario–case traceability | Downstream |
-| **Blueprint Intelligence** | Depends on governed design artifacts | Downstream |
+| Area | Assessment |
+|------|------------|
+| Intake lifecycle | **Appropriate** — create → validate → register → initialize → orchestrate → finalize |
+| Validation flow | **Appropriate** — schema + format catalog + checksum presence; fail-closed unknown formats |
+| Engine invocation | **Appropriate under O1** — invoke foundation pipeline; map missing-port/fail-closed to `accepted_pending_parser` |
+| Status model | **Appropriate** — distinguishes `rejected`, `failed`, `accepted`, `accepted_pending_parser` |
+| Context propagation | **Appropriate** — WP-2.4 bind; client tenant headers non-authoritative |
+| Error handling | **Appropriate** — typed taxonomy required in Final Plan |
+| Retry strategy | **Appropriate as design-only** — sync fail-fast; async retries only for transient infra later |
 
-**Conclusion:** As a **structural package**, RIE Foundation may precede Intake **technically**. As a **Phase 3 critical-path Work Package labeled WP-3.1**, it must not displace Intake Entry without explicit WBS resequencing. Downstream Scenario / Coverage / Blueprint / Test Design engines correctly remain later; this plan does not pull them forward.
+**Responsibility assignment:** Correct. No finding that intake should own structural assembly or that the engine should own intake status.
 
----
-
-## 4. Roadmap Assessment
-
-| Item | Canonical | Proposed plan |
-|------|-----------|---------------|
-| **WP-3.1 title** | Intake Entry Workflow | Requirement Intelligence Engine Foundation |
-| **Phase intent** | Phase 3 Knowledge Intake start | Shared structural substrate for later requirement analysis |
-| **Architecture authority** | ADR 0011 — ATI begins with Knowledge Intake | Correctly excludes Intake ownership in scope, but reuses Intake’s WP ID |
-
-### Determination
-
-| Hypothesis | Finding |
-|------------|---------|
-| Roadmap **naming** issue only | **Insufficient** — titles describe different capabilities (Intake product vs RIE substrate) |
-| Work package **sequencing** issue | **Yes — primary** — WP-3.1 slot is reserved for Intake Entry on the canonical WBS / Blueprint critical path |
-| Genuine **architectural conflict** (Spine/Auth/Obs/Context) | **No** — proposed engine foundation does not conflict with closed WP-2.x designs |
-
-### Recommendation (choose one — binding intent for Decision Resolution)
-
-**Primary recommendation: Re-sequence work packages (update WBS IDs).**
-
-Justification:
-
-1. ADR 0011 and Blueprint place **Document Management + Knowledge Intake Coordination** before Requirement Management analysis / Brain engines.  
-2. Canonical WBS already assigns **WP-3.1 = Intake Entry Workflow** with completion criteria (registerable inputs, audit/lineage primitives, no inventing ARS).  
-3. RIE Foundation is valuable and architecturally welcome, but it is **not** a substitute for Intake Entry.  
-4. Silently renaming WP-3.1 to RIE Foundation would orphan Intake Entry and falsify Phase 3 start conditions.  
-5. Leaving the roadmap unchanged while implementing RIE under WP-3.1 would create dual conflicting meanings for the same ID.
-
-**Preferred sequencing options (Decision Resolution must pick one):**
-
-| Option | Action |
-|--------|--------|
-| **A (preferred)** | Assign RIE Foundation as **WP-2.5** (Shared Infrastructure extension after WP-2.4 Context). Keep **WP-3.1 = Intake Entry Workflow**. |
-| **B** | Insert RIE Foundation as **WP-3.0** (or similar) immediately before Intake; shift nothing else if Intake remains WP-3.1. |
-| **C (only with Product + Architect approval)** | Formally **re-sequence Phase 3**: WP-3.1 = RIE Foundation; move Intake Entry to **WP-3.2** (and cascade subsequent WP-3.x IDs). Update roadmap, WBS, and indexes in the same Decision Resolution. |
-
-**Do not:** Leave roadmap unchanged.
-
-**Rename-only** (change roadmap title of WP-3.1 to RIE Foundation without relocating Intake Entry) is **rejected**.
+**Observation:** Intermediate statuses (`draft`, `validating`, `registered`, `engine_invoked`) are useful for observability; Final Plan should mark which are durable terminal vs ephemeral transition states for tests.
 
 ---
 
-## 5. Observations
+## Missing Parser Decision
 
-1. **WBS identity must be locked before Final Plan** — treat as governance-blocking for Authorization, not as an optional doc nit.  
-2. **Model vocabulary** — align Final Plan language with Domain “Requirement Object” / ARS subordination without implementing Domain aggregates.  
-3. **Package name** — `@ati/requirement-intelligence` vs `@ati/requirements-engine` remains open (non-blocking).  
-4. **Host HTTP probe** — optional; prefer in-process harness if probe surface risks looking like Domain product API.  
-5. **AI Runtime field expansion** — default deny unless Decision Resolution explicitly authorizes (preserve WP-1.4 locks).  
-6. **Stub parser** — acceptable for tests; must not become a stealth Markdown/FDD implementation.
+### Options reviewed
+
+| Option | Behaviour | UX | Extensibility | Failure semantics | Ops visibility | Consistency |
+|--------|-----------|----|---------------|-------------------|----------------|--------------|
+| **O1** | Invoke engine; map missing parser → **`accepted_pending_parser`** | Entry succeeds; capability gap explicit | Parsers later flip status without redesign | Not conflated with `rejected`/`failed` | Engine path + deferred reason observable | Aligns Entry ≠ Parser-ready |
+| **O2** | Skip invoke; `registered_awaiting_engine` | Similar | Weaker proof that orchestration wiring works | Clean but hides engine contract | Lower | Diverges from “orchestrate engine” objective |
+| **O3** | Hard-fail intake on missing parser | Poor until all parsers ship | Couples Entry to parser roadmap | Conflates validation with capability readiness | Noisy failures | Rejects ADR Entry-first posture |
+
+### Decision (locked)
+
+**`accepted_pending_parser` (O1) is the architectural standard for WP-3.1.**
+
+**Binding rules:**
+
+1. Declared format **in catalog** + valid registration metadata → intake may complete Entry successfully even when no production `ParsePort` is registered.  
+2. WP-3.1 **shall invoke** the engine facade (not skip) so missing-port / fail-closed is observed and mapped to **`accepted_pending_parser`**.  
+3. **`rejected`** is reserved for invalid input, unknown format keys, auth/context policy failures.  
+4. **`failed`** is reserved for unexpected infrastructure / orchestration faults.  
+5. **`accepted`** is reserved for successful structural pipeline completion when a real production port exists (future).  
+6. Test stub format / stub registration **must not** be used to force `accepted` on product intake paths.  
+7. Future parser WPs register ports on `@ati/requirement-engine`; intake architecture **must not** require redesign to advance `accepted_pending_parser` → `accepted`.
+
+**O2** and **O3** are **rejected** for WP-3.1.
 
 ---
 
-## 6. Recommendations
+## Dependency Review
 
-1. **Architecture Decision Resolution** must select Option A, B, or C above and rewrite the Work Package ID/title accordingly.  
-2. Preserve Pre-Implementation Plan **technical scope** (foundation only; non-goals intact).  
-3. Update `IMPLEMENTATION_ROADMAP_AND_WBS.md` / roadmap indexes in the same governance pass as Decision Resolution (documentation only).  
-4. Keep Intake Entry as an authorized Phase 3 Work Package with ADR 0011 ownership — do not absorb it into RIE Foundation.  
-5. Proceed to Final Pre-Implementation Plan only after ID/sequencing lock.
+| Dependency | Use | Unnecessary new platform dependency? |
+|------------|-----|--------------------------------------|
+| `@ati/requirement-engine` | Orchestration target | **No** — required |
+| Authentication Foundation (WP-2.2) | Fail-closed host surfaces | **No** |
+| Context Foundation (WP-2.4) | Tenant/workspace propagation | **No** |
+| Observability Foundation (WP-2.3) | Correlation / outcome events | **No** |
+| Shared constants / logging | Config keys, shared patterns | **No** |
+| Prisma / new data stores | — | **Must not introduce** |
+| AI Runtime / Brain engines | — | **Must not introduce** |
+| New IdP / connector stacks | — | **Must not introduce** |
+
+No new foundational platform dependency is justified beyond `@ati/intake` itself as the workflow package.
 
 ---
 
-## 7. Final Verdict
+## Future Extensibility (without scope expansion)
+
+| Future concern | Readiness under this design |
+|----------------|----------------------------|
+| Parser implementations (later format WPs — **not** WP-3.2) | **Ready** — WP-2.5 ports + O1 status transition |
+| WP-3.2 Classification & Designation | **Ready** — consumes registered intake identity; Entry does not invent ARS |
+| WP-3.3 Feature Version & Lineage | **Ready** — checksum/identity/version metadata on intake supports lineage hooks |
+| Async / job-bus execution | **Hooked** — retry/idempotency design-only; sync path in WP-3.1 |
+| Event-driven processing | **Compatible** — terminal statuses are event-emit candidates later; not implemented now |
+
+**Correction to mis-sequenced assumptions:** Do **not** treat WP-3.2 as “parser framework” or WP-3.3 as “requirement normalization product.” Those titles are locked elsewhere.
+
+---
+
+## Risk Assessment
+
+| ID | Class | Risk | Severity | Mitigation (no scope expansion) |
+|----|-------|------|----------|----------------------------------|
+| AR-R1 | Architectural | Intake grows into full ADR §4.1 workflow | High | Entry-only gate in Final Plan / Authorization; Deferred Register |
+| AR-R2 | Coupling | Intake embeds parse/normalize logic | High | Depend only on engine facade; forbid content-structure inference |
+| AR-R3 | Workflow | Missing-parser confused with failure | Medium | **O1 locked**; distinct statuses + ops docs |
+| AR-R4 | Operational | Document bodies in logs/metrics | Medium | Obs allow-list; no payload labels (carry WP-2.5 hygiene) |
+| AR-R5 | Operational | In-memory registry loss after process restart | Low (accepted) | Explicit non-persistence; document limitation |
+| AR-R6 | Workflow | Idempotency tuple underspecified | Medium | Final Plan must lock exact key fields |
+| AR-R7 | Coupling | Stub enabled in non-test deploys | Medium | Product path rejects `stub`; env default off |
+| AR-R8 | Architectural | Premature Domain HTTP / UX | Medium | Harness-first; Authorization condition |
+
+---
+
+## Recommendations
+
+| Priority | Recommendation |
+|----------|----------------|
+| **Mandatory before implementation** | Carry **O1 `accepted_pending_parser`** into Final Plan / Authorization as a locked decision |
+| **Mandatory before implementation** | Keep parsers/AI/persistence/ARS out of WP-3.1 Deferred Capability Register |
+| **Recommended** | Default package **`@ati/intake`**; thin host harness; omit Domain product routes unless Authorization explicitly adds a zero-business probe |
+| **Recommended** | Final Plan lock idempotency tuple and terminal vs transition statuses |
+| **Recommended** | Architecture Decision Resolution only if package name or host surface disputes arise — otherwise Final Plan may absorb locks |
+| **Do not** | Remap WP-3.2/WP-3.3 titles to parser/normalization |
+| **Do not** | Authorize implementation from this review alone |
+
+---
+
+## Final Verdict
 
 **APPROVED WITH OBSERVATIONS**
 
-The Requirement Intelligence Engine Foundation design is approved as a planning baseline for Decision Resolution. The WP-3.1 roadmap mismatch is a **sequencing issue** requiring formal WBS re-ID / re-sequence (**not** leave unchanged; **not** rename-only).
+WP-3.1 Intake Entry Workflow may proceed to **Final Pre-Implementation Plan** / Implementation Authorization path.
 
-**No code. No architecture redesign of Spine/Auth/Obs/Context.**
+### Locked by this Architecture Review
+
+| Lock | Value |
+|------|--------|
+| Missing-parser standard | **`accepted_pending_parser` (O1)** — **adopted** |
+| O2 / O3 | Rejected |
+| Package default | `@ati/intake` at `packages/intake` |
+| Scope | Entry orchestration only; no parsers/AI/persistence/ARS |
+| Engine relationship | Orchestrate `@ati/requirement-engine`; do not duplicate |
+
+### Observations (non-blocking)
+
+1. Exact HTTP/host surface and idempotency tuple remain for Final Plan.  
+2. Ephemeral vs terminal status set needs test-facing precision in Final Plan.  
+3. External “WP-3.2 = parsers” framing is incorrect under locked WBS — do not carry forward.  
+4. In-memory registry operational limits must remain explicit in Deferred Register / Known Limitations.
+
+**Implementation is not authorized by this document.**
 
 ---
 
 ## Review Status
 
-**WP-3.1 Architecture Review Complete**
-
-**Ready for Architecture Decision Resolution** (WBS identity mandatory)
+| Field | Value |
+|-------|--------|
+| Architecture Review complete | Yes |
+| Final Verdict | APPROVED WITH OBSERVATIONS |
+| `accepted_pending_parser` adopted as WP-3.1 standard | **Yes** |
+| Next stage | Final Pre-Implementation Plan (not produced here) |
+| Code / implementation | None |
 
 ---
 
-*End of WP-3.1 Architecture Review.*
+*End of WP-3.1 Architecture Review — Intake Entry Workflow.*

@@ -21,6 +21,7 @@
     "@ati/logger": "workspace:*",
     "@ati/observability": "workspace:*",
     "@ati/requirement-engine": "workspace:*",
+    "@ati/intake": "workspace:*",
     "@ati/shared-constants": "workspace:*",
     "@ati/shared-types": "workspace:*",
     "@ati/shared-utils": "workspace:*",

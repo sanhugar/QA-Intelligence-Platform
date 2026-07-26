@@ -4,7 +4,7 @@
 **Decision ID:** ATI-WP-IDENTITY-001  
 **Role:** ATI Platform Chief Architect  
 **Date:** 2026-07-26  
-**Inputs:** [WP-3.1_PRE_IMPLEMENTATION_PLAN.md](./WP-3.1_PRE_IMPLEMENTATION_PLAN.md) · [WP-3.1_ARCHITECTURE_REVIEW.md](./WP-3.1_ARCHITECTURE_REVIEW.md)  
+**Inputs:** [WP-2.5_PRE_IMPLEMENTATION_PLAN.md](./WP-2.5_PRE_IMPLEMENTATION_PLAN.md) (relocated historical RIE draft) · [WP-2.5_ARCHITECTURE_REVIEW.md](./WP-2.5_ARCHITECTURE_REVIEW.md) (relocated historical RIE Architecture Review)  
 **Platform baseline:** Stable Development Baseline **v2.4**  
 **Implementation:** Not authorized  
 

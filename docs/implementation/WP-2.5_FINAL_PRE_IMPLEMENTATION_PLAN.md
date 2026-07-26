@@ -14,8 +14,8 @@
 
 | Stage | Artifact / result |
 |-------|-------------------|
-| Pre-Implementation Plan | [WP-3.1_PRE_IMPLEMENTATION_PLAN.md](./WP-3.1_PRE_IMPLEMENTATION_PLAN.md) (content re-identified as WP-2.5) |
-| Architecture Review | [WP-3.1_ARCHITECTURE_REVIEW.md](./WP-3.1_ARCHITECTURE_REVIEW.md) — APPROVED WITH OBSERVATIONS |
+| Pre-Implementation Plan | [WP-2.5_PRE_IMPLEMENTATION_PLAN.md](./WP-2.5_PRE_IMPLEMENTATION_PLAN.md) (historical draft; formerly filed as WP-3.1_*) |
+| Architecture Review | [WP-2.5_ARCHITECTURE_REVIEW.md](./WP-2.5_ARCHITECTURE_REVIEW.md) — APPROVED WITH OBSERVATIONS (historical RIE review) |
 | WP Identity Decision | [WP_IDENTITY_ARCHITECTURE_DECISION.md](./WP_IDENTITY_ARCHITECTURE_DECISION.md) — **WP-2.5 APPROVED** |
 
 **Identity lock (binding):** WP-2.5 = Requirement Intelligence Engine Foundation · WP-3.1 = Intake Entry Workflow (unchanged).

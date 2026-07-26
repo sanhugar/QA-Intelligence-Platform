@@ -14,8 +14,8 @@
 |----------|------|
 | [WP-2.5_FINAL_PRE_IMPLEMENTATION_PLAN.md](./WP-2.5_FINAL_PRE_IMPLEMENTATION_PLAN.md) | Authoritative implementation baseline (D1–D7, WBS T1–T9) |
 | [WP_IDENTITY_ARCHITECTURE_DECISION.md](./WP_IDENTITY_ARCHITECTURE_DECISION.md) | Binding WP identity (WP-2.5 / WP-3.1) |
-| [WP-3.1_ARCHITECTURE_REVIEW.md](./WP-3.1_ARCHITECTURE_REVIEW.md) | APPROVED WITH OBSERVATIONS (identity resolved) |
-| [WP-3.1_PRE_IMPLEMENTATION_PLAN.md](./WP-3.1_PRE_IMPLEMENTATION_PLAN.md) | Planning precursor (re-identified as WP-2.5 content) |
+| [WP-2.5_ARCHITECTURE_REVIEW.md](./WP-2.5_ARCHITECTURE_REVIEW.md) | APPROVED WITH OBSERVATIONS (historical RIE review; identity resolved) |
+| [WP-2.5_PRE_IMPLEMENTATION_PLAN.md](./WP-2.5_PRE_IMPLEMENTATION_PLAN.md) | Planning precursor (relocated historical RIE draft) |
 
 ---
 

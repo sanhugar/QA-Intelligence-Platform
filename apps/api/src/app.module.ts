@@ -4,12 +4,14 @@ import { ObservabilityModule } from './observability/observability.module';
 import { AuthModule } from './auth/auth.module';
 import { ContextModule } from './context/context.module';
 import { RequirementEngineModule } from './requirement-engine/requirement-engine.module';
+import { IntakeModule } from './intake/intake.module';
 
 /**
  * API host root module.
  * Middleware registration order (WP-2.3 L3 + WP-2.4):
  * Observability (correlation) → Auth → Context.
  * WP-2.5: RequirementEngineModule is harness-only (no HTTP middleware).
+ * WP-3.1: IntakeModule is harness-only (no HTTP controllers).
  */
 @Module({
   imports: [
@@ -18,6 +20,7 @@ import { RequirementEngineModule } from './requirement-engine/requirement-engine
     AuthModule,
     ContextModule,
     RequirementEngineModule,
+    IntakeModule,
   ],
 })
 export class AppModule {}

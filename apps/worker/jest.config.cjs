@@ -22,5 +22,6 @@ module.exports = {
     '^@ati/logger$': '<rootDir>/../../packages/logger/src',
     '^@ati/observability$': '<rootDir>/../../packages/observability/src',
     '^@ati/requirement-engine$': '<rootDir>/../../packages/requirement-engine/src',
+    '^@ati/intake$': '<rootDir>/../../packages/intake/src',
   },
 };

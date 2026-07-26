@@ -119,8 +119,8 @@ Executable planning, Work Package reports, and deferred-capability registers.
 | Document | Purpose |
 |----------|---------|
 | [WP_IDENTITY_ARCHITECTURE_DECISION.md](./WP_IDENTITY_ARCHITECTURE_DECISION.md) | Binding identity (WP-2.5 / WP-3.1) |
-| [WP-3.1_PRE_IMPLEMENTATION_PLAN.md](./WP-3.1_PRE_IMPLEMENTATION_PLAN.md) | Historical planning precursor (re-identified as WP-2.5) |
-| [WP-3.1_ARCHITECTURE_REVIEW.md](./WP-3.1_ARCHITECTURE_REVIEW.md) | Historical Architecture Review (identity resolved to WP-2.5) |
+| [WP-2.5_PRE_IMPLEMENTATION_PLAN.md](./WP-2.5_PRE_IMPLEMENTATION_PLAN.md) | Historical planning precursor (relocated RIE draft; formerly WP-3.1_*) |
+| [WP-2.5_ARCHITECTURE_REVIEW.md](./WP-2.5_ARCHITECTURE_REVIEW.md) | Historical Architecture Review (relocated RIE review; identity resolved to WP-2.5) |
 | [WP-2.5_FINAL_PRE_IMPLEMENTATION_PLAN.md](./WP-2.5_FINAL_PRE_IMPLEMENTATION_PLAN.md) | Final pre-implementation plan |
 | [WP-2.5_IMPLEMENTATION_AUTHORIZATION.md](./WP-2.5_IMPLEMENTATION_AUTHORIZATION.md) | Implementation authorization |
 | [WP-2.5_ROADMAP_SYNCHRONIZATION_REPORT.md](./WP-2.5_ROADMAP_SYNCHRONIZATION_REPORT.md) | Roadmap / WBS synchronization |
@@ -132,11 +132,33 @@ Executable planning, Work Package reports, and deferred-capability registers.
 | [WP-2.5_GIT_READINESS_REVIEW.md](./WP-2.5_GIT_READINESS_REVIEW.md) | Git readiness review |
 | [../../packages/requirement-engine/README.md](../../packages/requirement-engine/README.md) | `@ati/requirement-engine` package |
 
-**Status:** Complete — Independent Architecture Review APPROVED WITH OBSERVATIONS — closed (Git Readiness complete; Release Baseline v2.5 pending).  
+**Status:** **Released** — Stable Development Baseline **v2.5** ([RELEASE_BASELINE_v2.5.md](../releases/RELEASE_BASELINE_v2.5.md)).  
 **Identity:** WP-2.5 = RIE Foundation · WP-3.1 remains Intake Entry Workflow.
+
+## WP-3.1 — Intake Entry Workflow
+
+| Document | Purpose |
+|----------|---------|
+| [WP-3.1_PRE_IMPLEMENTATION_PLAN.md](./WP-3.1_PRE_IMPLEMENTATION_PLAN.md) | Pre-implementation plan (Intake Entry) |
+| [WP-3.1_ARCHITECTURE_REVIEW.md](./WP-3.1_ARCHITECTURE_REVIEW.md) | Architecture review (Intake Entry) |
+| [WP-3.1_FINAL_PRE_IMPLEMENTATION_PLAN.md](./WP-3.1_FINAL_PRE_IMPLEMENTATION_PLAN.md) | Final pre-implementation plan (D1–D8) |
+| [WP-3.1_IMPLEMENTATION_AUTHORIZATION.md](./WP-3.1_IMPLEMENTATION_AUTHORIZATION.md) | Implementation authorization (C1–C7) |
+| [WP-3.1_ROADMAP_SYNCHRONIZATION_REPORT.md](./WP-3.1_ROADMAP_SYNCHRONIZATION_REPORT.md) | Roadmap / index synchronization |
+| [WP-3.1_IMPLEMENTATION_REPORT.md](./WP-3.1_IMPLEMENTATION_REPORT.md) | Implementation report |
+| [WP-3.1_DEFERRED_CAPABILITY_REGISTER.md](./WP-3.1_DEFERRED_CAPABILITY_REGISTER.md) | Deferred capabilities |
+| [WP-3.1_SELF_REVIEW.md](./WP-3.1_SELF_REVIEW.md) | Self review |
+| [WP-3.1_INDEPENDENT_ARCHITECTURE_REVIEW.md](./WP-3.1_INDEPENDENT_ARCHITECTURE_REVIEW.md) | Independent architecture review |
+| [WP-3.1_REPOSITORY_CLOSEOUT.md](./WP-3.1_REPOSITORY_CLOSEOUT.md) | Repository closeout |
+| [WP-3.1_GIT_READINESS_REVIEW.md](./WP-3.1_GIT_READINESS_REVIEW.md) | Git readiness review |
+| [../../packages/intake/README.md](../../packages/intake/README.md) | `@ati/intake` package |
+
+**Status:** Complete — Independent Architecture Review APPROVED WITH OBSERVATIONS — closed (Git Readiness complete; Release Baseline v3.1 pending).  
+**Package:** **`@ati/intake`** (`packages/intake`).  
+**Identity:** WP-3.1 = Intake Entry Workflow (not RIE Foundation).  
+**Missing-parser standard:** `accepted_pending_parser` (O1) locked.
 
 ## Next
 
 | Work Package | Status |
 |--------------|--------|
-| WP-3.1 Intake Entry Workflow | Not started (Phase 3) |
+| WP-3.2 Classification & Designation | Not started |

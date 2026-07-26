@@ -48,7 +48,7 @@
 
 **All mandatory governance gates completed successfully.** Mandatory remediation: **None**.
 
-Historical planning precursors retained as audit trail: `WP-3.1_PRE_IMPLEMENTATION_PLAN.md`, `WP-3.1_ARCHITECTURE_REVIEW.md` (content re-identified as WP-2.5).
+Historical planning precursors retained as audit trail: [WP-2.5_PRE_IMPLEMENTATION_PLAN.md](../implementation/WP-2.5_PRE_IMPLEMENTATION_PLAN.md), [WP-2.5_ARCHITECTURE_REVIEW.md](../implementation/WP-2.5_ARCHITECTURE_REVIEW.md) (relocated RIE draft/review; content re-identified as WP-2.5).
 
 ---
 
@@ -194,7 +194,8 @@ Continue per the platform roadmap and [Implementation Roadmap & WBS](../implemen
 
 | Order | Work Package | Status |
 |-------|--------------|--------|
-| **Next** | **WP-3.1 — Intake Entry Workflow** | Not started (Phase 3 Knowledge Intake; separate authorization) |
+| **Next** | **WP-3.1 — Intake Entry Workflow** (`@ati/intake`) | **Complete** — governance closed; Release Baseline v3.1 pending ([Closeout](../implementation/WP-3.1_REPOSITORY_CLOSEOUT.md) · [Git Readiness](../implementation/WP-3.1_GIT_READINESS_REVIEW.md)) |
+| Then | **WP-3.2 — Classification & Designation** | Not started |
 
 Identity lock remains binding: [WP Identity Architecture Decision](../implementation/WP_IDENTITY_ARCHITECTURE_DECISION.md).
 

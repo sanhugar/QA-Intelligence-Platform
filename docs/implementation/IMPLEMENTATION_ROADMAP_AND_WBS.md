@@ -194,9 +194,9 @@ Work packages are implementation packages — not task-level tickets. No APIs/sc
 | **Dependencies** | WP-2.1–WP-2.4 (Shared Infrastructure: packages, auth, observability, context) |
 | **Expected outcomes** | `@ati/requirement-engine` foundation; format extension points; thin host harness |
 | **Completion criteria** | Model + pipeline contracts + lifecycle tests; zero persistence/AI/real parsers |
-| **Implementation status** | **Complete** — Independent Architecture Review APPROVED WITH OBSERVATIONS — closed (Git Readiness complete; Release Baseline v2.5 pending) |
+| **Implementation status** | **Released** — Stable Development Baseline **v2.5** ([RELEASE_BASELINE_v2.5.md](../releases/RELEASE_BASELINE_v2.5.md)) |
 | **Identity** | Locked by [WP_IDENTITY_ARCHITECTURE_DECISION.md](./WP_IDENTITY_ARCHITECTURE_DECISION.md) — **not** WP-3.1 |
-| **Artifacts** | [WP-2.5_IMPLEMENTATION_REPORT.md](./WP-2.5_IMPLEMENTATION_REPORT.md) · [WP-2.5_DEFERRED_CAPABILITY_REGISTER.md](./WP-2.5_DEFERRED_CAPABILITY_REGISTER.md) · [WP-2.5_REPOSITORY_CLOSEOUT.md](./WP-2.5_REPOSITORY_CLOSEOUT.md) · [WP-2.5_GIT_READINESS_REVIEW.md](./WP-2.5_GIT_READINESS_REVIEW.md) · [WP-2.5_INDEPENDENT_ARCHITECTURE_REVIEW.md](./WP-2.5_INDEPENDENT_ARCHITECTURE_REVIEW.md) · [WP-2.5_SELF_REVIEW.md](./WP-2.5_SELF_REVIEW.md) · [WP-2.5_FINAL_PRE_IMPLEMENTATION_PLAN.md](./WP-2.5_FINAL_PRE_IMPLEMENTATION_PLAN.md) · [WP-2.5_IMPLEMENTATION_AUTHORIZATION.md](./WP-2.5_IMPLEMENTATION_AUTHORIZATION.md) |
+| **Artifacts** | [WP-2.5_IMPLEMENTATION_REPORT.md](./WP-2.5_IMPLEMENTATION_REPORT.md) · [WP-2.5_DEFERRED_CAPABILITY_REGISTER.md](./WP-2.5_DEFERRED_CAPABILITY_REGISTER.md) · [WP-2.5_REPOSITORY_CLOSEOUT.md](./WP-2.5_REPOSITORY_CLOSEOUT.md) · [WP-2.5_GIT_READINESS_REVIEW.md](./WP-2.5_GIT_READINESS_REVIEW.md) · [WP-2.5_INDEPENDENT_ARCHITECTURE_REVIEW.md](./WP-2.5_INDEPENDENT_ARCHITECTURE_REVIEW.md) · [WP-2.5_SELF_REVIEW.md](./WP-2.5_SELF_REVIEW.md) · [WP-2.5_FINAL_PRE_IMPLEMENTATION_PLAN.md](./WP-2.5_FINAL_PRE_IMPLEMENTATION_PLAN.md) · [WP-2.5_IMPLEMENTATION_AUTHORIZATION.md](./WP-2.5_IMPLEMENTATION_AUTHORIZATION.md) · [RELEASE_BASELINE_v2.5.md](../releases/RELEASE_BASELINE_v2.5.md) |
 | **Process** | [IMPLEMENTATION_WORKFLOW.md](../development/IMPLEMENTATION_WORKFLOW.md) |
 
 *WP-2.x may proceed largely in parallel with late Phase 1 once WP-1.1 exists.*
@@ -210,10 +210,14 @@ Work packages are implementation packages — not task-level tickets. No APIs/sc
 | Field | Content |
 |-------|---------|
 | **Purpose** | Knowledge Intake entry under Orchestration ownership |
-| **Dependencies** | Phase 1–2 baselines (including WP-2.5 when RIE structural types are required by Intake consumers); Orchestration Architecture (ADR 0011) |
-| **Expected outcomes** | Inputs registerable with identity/version/checksum metadata |
-| **Completion criteria** | Intake without inventing ARS; audit/lineage primitives present |
+| **Dependencies** | Phase 1–2 baselines (including WP-2.5 / `@ati/requirement-engine`); Orchestration Architecture (ADR 0011) |
+| **Expected outcomes** | Nest-free `@ati/intake`; inputs registerable with identity/version/checksum metadata; engine orchestration; `accepted_pending_parser` standard |
+| **Completion criteria** | Intake Entry without inventing ARS; audit/correlation primitives; no parsers/AI/persistence |
+| **Package** | **`@ati/intake`** (`packages/intake`) |
+| **Implementation status** | **Complete** — Independent Architecture Review APPROVED WITH OBSERVATIONS — closed (Git Readiness complete; Release Baseline v3.1 pending) |
 | **Identity** | **Authoritative** — Intake Entry Workflow (not Requirement Intelligence Engine Foundation) |
+| **Artifacts** | [WP-3.1_IMPLEMENTATION_REPORT.md](./WP-3.1_IMPLEMENTATION_REPORT.md) · [WP-3.1_DEFERRED_CAPABILITY_REGISTER.md](./WP-3.1_DEFERRED_CAPABILITY_REGISTER.md) · [WP-3.1_REPOSITORY_CLOSEOUT.md](./WP-3.1_REPOSITORY_CLOSEOUT.md) · [WP-3.1_GIT_READINESS_REVIEW.md](./WP-3.1_GIT_READINESS_REVIEW.md) · [WP-3.1_INDEPENDENT_ARCHITECTURE_REVIEW.md](./WP-3.1_INDEPENDENT_ARCHITECTURE_REVIEW.md) · [WP-3.1_SELF_REVIEW.md](./WP-3.1_SELF_REVIEW.md) · [WP-3.1_IMPLEMENTATION_AUTHORIZATION.md](./WP-3.1_IMPLEMENTATION_AUTHORIZATION.md) · [WP-3.1_FINAL_PRE_IMPLEMENTATION_PLAN.md](./WP-3.1_FINAL_PRE_IMPLEMENTATION_PLAN.md) |
+| **Process** | [IMPLEMENTATION_WORKFLOW.md](../development/IMPLEMENTATION_WORKFLOW.md) |
 
 #### WP-3.2 Classification & Designation
 

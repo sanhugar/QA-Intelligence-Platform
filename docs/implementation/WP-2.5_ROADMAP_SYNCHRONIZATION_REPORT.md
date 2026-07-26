@@ -54,8 +54,8 @@
 | `WP_IDENTITY_ARCHITECTURE_DECISION.md` | Completed binding decision |
 | `WP-2.5_FINAL_PRE_IMPLEMENTATION_PLAN.md` | Completed Final Plan |
 | `WP-2.5_IMPLEMENTATION_AUTHORIZATION.md` | Completed Authorization |
-| `WP-3.1_PRE_IMPLEMENTATION_PLAN.md` | Historical precursor (filename retained) |
-| `WP-3.1_ARCHITECTURE_REVIEW.md` | Historical review (filename retained) |
+| `WP-2.5_PRE_IMPLEMENTATION_PLAN.md` | Historical precursor (relocated from WP-3.1_*; RIE content) |
+| `WP-2.5_ARCHITECTURE_REVIEW.md` | Historical review (relocated from WP-3.1_*; RIE content) |
 | `WP-2.4_*` governance / delivery set | Completed WP-2.4 artifacts |
 | `RELEASE_BASELINE_v2.3.md` | Historical v2.3 release note |
 

@@ -41,8 +41,8 @@ Identity Decision is respected: **WP-2.5** remains Shared Infrastructure RIE Fou
 | Stage | Artifact | Present | Verdict / status |
 |-------|----------|---------|------------------|
 | Identity Decision | [WP_IDENTITY_ARCHITECTURE_DECISION.md](./WP_IDENTITY_ARCHITECTURE_DECISION.md) | Yes | Binding |
-| Historical planning precursor | [WP-3.1_PRE_IMPLEMENTATION_PLAN.md](./WP-3.1_PRE_IMPLEMENTATION_PLAN.md) | Yes | Audit trail (re-identified as WP-2.5) |
-| Historical Architecture Review | [WP-3.1_ARCHITECTURE_REVIEW.md](./WP-3.1_ARCHITECTURE_REVIEW.md) | Yes | Audit trail (identity resolved) |
+| Historical planning precursor | [WP-2.5_PRE_IMPLEMENTATION_PLAN.md](./WP-2.5_PRE_IMPLEMENTATION_PLAN.md) | Yes | Audit trail (relocated from WP-3.1_*; re-identified as WP-2.5) |
+| Historical Architecture Review | [WP-2.5_ARCHITECTURE_REVIEW.md](./WP-2.5_ARCHITECTURE_REVIEW.md) | Yes | Audit trail (relocated from WP-3.1_*; identity resolved) |
 | Final Pre-Implementation Plan | [WP-2.5_FINAL_PRE_IMPLEMENTATION_PLAN.md](./WP-2.5_FINAL_PRE_IMPLEMENTATION_PLAN.md) | Yes | APPROVED FOR IMPLEMENTATION AUTHORIZATION |
 | Implementation Authorization | [WP-2.5_IMPLEMENTATION_AUTHORIZATION.md](./WP-2.5_IMPLEMENTATION_AUTHORIZATION.md) | Yes | APPROVED WITH CONDITIONS C1–C7 |
 | Roadmap Synchronization | [WP-2.5_ROADMAP_SYNCHRONIZATION_REPORT.md](./WP-2.5_ROADMAP_SYNCHRONIZATION_REPORT.md) | Yes | Complete |

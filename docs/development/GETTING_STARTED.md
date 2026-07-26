@@ -92,6 +92,14 @@ Non-authoritative client headers (never used as authority): `x-ati-tenant-id`, `
 | `ATI_REQUIREMENT_ENGINE_ENABLED` | both | Default true |
 | `ATI_REQUIREMENT_ENGINE_REGISTER_STUB` | both | Register test-only `stub` parser (default false) |
 
+### WP-3.1 — Intake Entry
+
+| Variable | Host | Notes |
+|----------|------|-------|
+| `ATI_INTAKE_ENABLED` | both | Default true; disables workflow when false |
+
+Package **`@ati/intake`**. See [WP-3.1 Implementation Authorization](../implementation/WP-3.1_IMPLEMENTATION_AUTHORIZATION.md) · [Implementation Report](../implementation/WP-3.1_IMPLEMENTATION_REPORT.md).
+
 ### WP-2.3 documentation
 
 | Document | Link |
