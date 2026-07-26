@@ -23,5 +23,6 @@ module.exports = {
     '^@ati/observability$': '<rootDir>/../../packages/observability/src',
     '^@ati/requirement-engine$': '<rootDir>/../../packages/requirement-engine/src',
     '^@ati/intake$': '<rootDir>/../../packages/intake/src',
+    '^@ati/classification$': '<rootDir>/../../packages/classification/src',
   },
 };

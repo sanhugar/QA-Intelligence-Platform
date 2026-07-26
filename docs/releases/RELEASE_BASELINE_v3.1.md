@@ -148,7 +148,8 @@ Prerequisite tags for prior baselines (if not already applied): `wp-2.2-complete
 
 | Order | Work Package | Status |
 |-------|--------------|--------|
-| **Next** | **WP-3.2 — Classification & Designation** | Not started (separate authorization) |
+| **Next** | **WP-3.2 — Classification & Designation** (`@ati/classification`) | **Implemented** — Self Review pending ([Implementation Report](../implementation/WP-3.2_IMPLEMENTATION_REPORT.md)) |
+| Then | **WP-3.3 — Feature Version & Lineage Primitives** | Not started |
 
 ---
 

@@ -11,10 +11,11 @@ Enterprise AI QA Knowledge Platform.
 - See [docs/architecture/ARCHITECTURE_BASELINE_STATUS.md](docs/architecture/ARCHITECTURE_BASELINE_STATUS.md).
 - ADRs 0001–0015 are the approved development baseline — no redesign via implementation.
 - Execution follows [docs/implementation/IMPLEMENTATION_ROADMAP_AND_WBS.md](docs/implementation/IMPLEMENTATION_ROADMAP_AND_WBS.md).
-- **WP-1.1–WP-2.5 complete** — Stable Development Baseline **v2.5** released (`@ati/requirement-engine`). **WP-3.1 complete** — Intake Entry Workflow (`@ati/intake`); governance closed; Release Baseline v3.1 pending.
-- **Identity:** WP-2.5 = Requirement Intelligence Engine Foundation · WP-3.1 = Intake Entry Workflow ([Identity Decision](docs/implementation/WP_IDENTITY_ARCHITECTURE_DECISION.md)).
-- WP-2.5: [Release Baseline v2.5](docs/releases/RELEASE_BASELINE_v2.5.md) · [Implementation Report](docs/implementation/WP-2.5_IMPLEMENTATION_REPORT.md) · [Closeout](docs/implementation/WP-2.5_REPOSITORY_CLOSEOUT.md) · [Deferred](docs/implementation/WP-2.5_DEFERRED_CAPABILITY_REGISTER.md) · [`@ati/requirement-engine`](packages/requirement-engine/README.md)
-- WP-3.1: [Implementation Report](docs/implementation/WP-3.1_IMPLEMENTATION_REPORT.md) · [Closeout](docs/implementation/WP-3.1_REPOSITORY_CLOSEOUT.md) · [Git Readiness](docs/implementation/WP-3.1_GIT_READINESS_REVIEW.md) · [Deferred](docs/implementation/WP-3.1_DEFERRED_CAPABILITY_REGISTER.md) · [`@ati/intake`](packages/intake/README.md)
+- **WP-1.1–WP-3.1 complete** — Stable Development Baseline **v3.1** released (`@ati/intake`). **WP-3.2 Implemented** — Classification & Designation (`@ati/classification`); Self Review pending.
+- **Identity:** WP-2.5 = Requirement Intelligence Engine Foundation · WP-3.1 = Intake Entry Workflow · WP-3.2 = Classification & Designation ([Identity Decision](docs/implementation/WP_IDENTITY_ARCHITECTURE_DECISION.md)).
+- WP-2.5: [Release Baseline v2.5](docs/releases/RELEASE_BASELINE_v2.5.md) · [Implementation Report](docs/implementation/WP-2.5_IMPLEMENTATION_REPORT.md) · [`@ati/requirement-engine`](packages/requirement-engine/README.md)
+- WP-3.1: [Release Baseline v3.1](docs/releases/RELEASE_BASELINE_v3.1.md) · [Implementation Report](docs/implementation/WP-3.1_IMPLEMENTATION_REPORT.md) · [Closeout](docs/implementation/WP-3.1_REPOSITORY_CLOSEOUT.md) · [Deferred](docs/implementation/WP-3.1_DEFERRED_CAPABILITY_REGISTER.md) · [`@ati/intake`](packages/intake/README.md)
+- WP-3.2: [Implementation Report](docs/implementation/WP-3.2_IMPLEMENTATION_REPORT.md) · [Deferred](docs/implementation/WP-3.2_DEFERRED_CAPABILITY_REGISTER.md) · [Authorization](docs/implementation/WP-3.2_IMPLEMENTATION_AUTHORIZATION.md) · [`@ati/classification`](packages/classification/README.md)
 - WP-2.4: [Implementation Report](docs/implementation/WP-2.4_IMPLEMENTATION_REPORT.md) · [Closeout](docs/implementation/WP-2.4_REPOSITORY_CLOSEOUT.md) · [Deferred](docs/implementation/WP-2.4_DEFERRED_CAPABILITY_REGISTER.md) · [`@ati/context`](packages/context/README.md) · [Release Baseline v2.4](docs/releases/RELEASE_BASELINE_v2.4.md)
 
 ## Start Here

@@ -214,19 +214,24 @@ Work packages are implementation packages — not task-level tickets. No APIs/sc
 | **Expected outcomes** | Nest-free `@ati/intake`; inputs registerable with identity/version/checksum metadata; engine orchestration; `accepted_pending_parser` standard |
 | **Completion criteria** | Intake Entry without inventing ARS; audit/correlation primitives; no parsers/AI/persistence |
 | **Package** | **`@ati/intake`** (`packages/intake`) |
-| **Implementation status** | **Complete** — Independent Architecture Review APPROVED WITH OBSERVATIONS — closed (Git Readiness complete; Release Baseline v3.1 pending) |
+| **Implementation status** | **Released** — Stable Development Baseline **v3.1** ([RELEASE_BASELINE_v3.1.md](../releases/RELEASE_BASELINE_v3.1.md)) |
 | **Identity** | **Authoritative** — Intake Entry Workflow (not Requirement Intelligence Engine Foundation) |
-| **Artifacts** | [WP-3.1_IMPLEMENTATION_REPORT.md](./WP-3.1_IMPLEMENTATION_REPORT.md) · [WP-3.1_DEFERRED_CAPABILITY_REGISTER.md](./WP-3.1_DEFERRED_CAPABILITY_REGISTER.md) · [WP-3.1_REPOSITORY_CLOSEOUT.md](./WP-3.1_REPOSITORY_CLOSEOUT.md) · [WP-3.1_GIT_READINESS_REVIEW.md](./WP-3.1_GIT_READINESS_REVIEW.md) · [WP-3.1_INDEPENDENT_ARCHITECTURE_REVIEW.md](./WP-3.1_INDEPENDENT_ARCHITECTURE_REVIEW.md) · [WP-3.1_SELF_REVIEW.md](./WP-3.1_SELF_REVIEW.md) · [WP-3.1_IMPLEMENTATION_AUTHORIZATION.md](./WP-3.1_IMPLEMENTATION_AUTHORIZATION.md) · [WP-3.1_FINAL_PRE_IMPLEMENTATION_PLAN.md](./WP-3.1_FINAL_PRE_IMPLEMENTATION_PLAN.md) |
+| **Artifacts** | [WP-3.1_IMPLEMENTATION_REPORT.md](./WP-3.1_IMPLEMENTATION_REPORT.md) · [WP-3.1_DEFERRED_CAPABILITY_REGISTER.md](./WP-3.1_DEFERRED_CAPABILITY_REGISTER.md) · [WP-3.1_REPOSITORY_CLOSEOUT.md](./WP-3.1_REPOSITORY_CLOSEOUT.md) · [WP-3.1_GIT_READINESS_REVIEW.md](./WP-3.1_GIT_READINESS_REVIEW.md) · [RELEASE_BASELINE_v3.1.md](../releases/RELEASE_BASELINE_v3.1.md) |
 | **Process** | [IMPLEMENTATION_WORKFLOW.md](../development/IMPLEMENTATION_WORKFLOW.md) |
 
 #### WP-3.2 Classification & Designation
 
 | Field | Content |
 |-------|---------|
-| **Purpose** | Classification signals + Approved Requirements Source designation (Orchestration-owned) |
-| **Dependencies** | WP-3.1 |
-| **Expected outcomes** | Clear `approved_requirements_source` vs supporting roles |
-| **Completion criteria** | Generation paths cannot proceed without designation; HITL on low-confidence classification per policy |
+| **Purpose** | Deterministic classification & designation metadata (category, processing designation, `knowledge_role`) |
+| **Dependencies** | WP-3.1 (`@ati/intake`); WP-2.5 (`@ati/requirement-engine`); ADR 0011 |
+| **Expected outcomes** | Nest-free `@ati/classification`; `ClassificationResult` schema v1.0; ARS Option A metadata only |
+| **Completion criteria** | Deterministic rules; unknown handling; no AI/persistence/ARS product/gating/HITL |
+| **Package** | **`@ati/classification`** (`packages/classification`) |
+| **Implementation status** | **Implemented** — Self Review / Independent Review / Closeout / Release pending ([WP-3.2_IMPLEMENTATION_REPORT.md](./WP-3.2_IMPLEMENTATION_REPORT.md)) |
+| **Identity** | **Authoritative** — Classification & Designation |
+| **Artifacts** | [WP-3.2_IMPLEMENTATION_REPORT.md](./WP-3.2_IMPLEMENTATION_REPORT.md) · [WP-3.2_DEFERRED_CAPABILITY_REGISTER.md](./WP-3.2_DEFERRED_CAPABILITY_REGISTER.md) · [WP-3.2_IMPLEMENTATION_AUTHORIZATION.md](./WP-3.2_IMPLEMENTATION_AUTHORIZATION.md) · [WP-3.2_FINAL_PRE_IMPLEMENTATION_PLAN.md](./WP-3.2_FINAL_PRE_IMPLEMENTATION_PLAN.md) · [WP-3.2_ARCHITECTURE_REVIEW.md](./WP-3.2_ARCHITECTURE_REVIEW.md) · [WP-3.2_PRE_IMPLEMENTATION_PLAN.md](./WP-3.2_PRE_IMPLEMENTATION_PLAN.md) · [WP-3.2_ROADMAP_SYNCHRONIZATION_REPORT.md](./WP-3.2_ROADMAP_SYNCHRONIZATION_REPORT.md) |
+| **Process** | [IMPLEMENTATION_WORKFLOW.md](../development/IMPLEMENTATION_WORKFLOW.md) |
 
 #### WP-3.3 Feature Version & Lineage Primitives
 

@@ -5,6 +5,7 @@ import { WorkerAuthModule } from './auth/auth.module';
 import { WorkerContextModule } from './context/context.module';
 import { WorkerRequirementEngineModule } from './requirement-engine/requirement-engine.module';
 import { WorkerIntakeModule } from './intake/intake.module';
+import { WorkerClassificationModule } from './classification/classification.module';
 
 /**
  * Worker host root module.
@@ -12,6 +13,7 @@ import { WorkerIntakeModule } from './intake/intake.module';
  * correlation mint → service auth → trusted context bind.
  * WP-2.5: Requirement engine harness-only (no HTTP).
  * WP-3.1: Intake harness-only (no HTTP).
+ * WP-3.2: Classification harness-only (no HTTP).
  */
 @Module({
   imports: [
@@ -21,6 +23,7 @@ import { WorkerIntakeModule } from './intake/intake.module';
     WorkerContextModule,
     WorkerRequirementEngineModule,
     WorkerIntakeModule,
+    WorkerClassificationModule,
   ],
 })
 export class AppModule {}

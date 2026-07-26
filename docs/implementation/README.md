@@ -152,13 +152,31 @@ Executable planning, Work Package reports, and deferred-capability registers.
 | [WP-3.1_GIT_READINESS_REVIEW.md](./WP-3.1_GIT_READINESS_REVIEW.md) | Git readiness review |
 | [../../packages/intake/README.md](../../packages/intake/README.md) | `@ati/intake` package |
 
-**Status:** Complete — Independent Architecture Review APPROVED WITH OBSERVATIONS — closed (Git Readiness complete; Release Baseline v3.1 pending).  
+**Status:** **Released** — Stable Development Baseline **v3.1** ([RELEASE_BASELINE_v3.1.md](../releases/RELEASE_BASELINE_v3.1.md)).  
 **Package:** **`@ati/intake`** (`packages/intake`).  
 **Identity:** WP-3.1 = Intake Entry Workflow (not RIE Foundation).  
 **Missing-parser standard:** `accepted_pending_parser` (O1) locked.
+
+## WP-3.2 — Classification & Designation
+
+| Document | Purpose |
+|----------|---------|
+| [WP-3.2_PRE_IMPLEMENTATION_PLAN.md](./WP-3.2_PRE_IMPLEMENTATION_PLAN.md) | Pre-implementation plan |
+| [WP-3.2_ARCHITECTURE_REVIEW.md](./WP-3.2_ARCHITECTURE_REVIEW.md) | Architecture review |
+| [WP-3.2_FINAL_PRE_IMPLEMENTATION_PLAN.md](./WP-3.2_FINAL_PRE_IMPLEMENTATION_PLAN.md) | Final pre-implementation plan (D1–D8) |
+| [WP-3.2_IMPLEMENTATION_AUTHORIZATION.md](./WP-3.2_IMPLEMENTATION_AUTHORIZATION.md) | Implementation authorization (C1–C7) |
+| [WP-3.2_ROADMAP_SYNCHRONIZATION_REPORT.md](./WP-3.2_ROADMAP_SYNCHRONIZATION_REPORT.md) | Roadmap / index synchronization |
+| [WP-3.2_IMPLEMENTATION_REPORT.md](./WP-3.2_IMPLEMENTATION_REPORT.md) | Implementation report |
+| [WP-3.2_DEFERRED_CAPABILITY_REGISTER.md](./WP-3.2_DEFERRED_CAPABILITY_REGISTER.md) | Deferred capability register |
+
+**Status:** **Implemented** — Self Review / Independent Review / Closeout / Release pending.  
+**Package:** **`@ati/classification`** (`packages/classification`).  
+**Identity:** WP-3.2 = Classification & Designation.  
+**ARS standard:** `knowledge_role` metadata only (`ars_candidate` | `supporting` | `unknown`); product/gating deferred.
 
 ## Next
 
 | Work Package | Status |
 |--------------|--------|
-| WP-3.2 Classification & Designation | Not started |
+| WP-3.2 Classification & Designation | Implemented — Self Review pending (`@ati/classification`) |
+| WP-3.3 Feature Version & Lineage Primitives | Not started |

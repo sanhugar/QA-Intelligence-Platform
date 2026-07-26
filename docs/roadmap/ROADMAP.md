@@ -129,11 +129,11 @@ This roadmap is intentional sequencing for a 5–10 year platform. It does **not
 - Canonical WBS / build order: [IMPLEMENTATION_ROADMAP_AND_WBS.md](../implementation/IMPLEMENTATION_ROADMAP_AND_WBS.md)
 - Work Package SOP: [IMPLEMENTATION_WORKFLOW.md](../development/IMPLEMENTATION_WORKFLOW.md)
 - Organizes Phases 1–10 (Spine → Production readiness); does **not** redesign architecture
-- **WP-1.1–WP-2.5 complete** (Release Baseline **v2.5** released) · **WP-3.1 complete** (Intake Entry Workflow — `@ati/intake`; governance closed; Release Baseline v3.1 pending)
-- **Identity lock:** WP-2.5 = Requirement Intelligence Engine Foundation · WP-3.1 = Intake Entry Workflow ([WP Identity Decision](../implementation/WP_IDENTITY_ARCHITECTURE_DECISION.md))
-- WP-2.4 artifacts: [Implementation Report](../implementation/WP-2.4_IMPLEMENTATION_REPORT.md) · [Closeout](../implementation/WP-2.4_REPOSITORY_CLOSEOUT.md) · [Deferred](../implementation/WP-2.4_DEFERRED_CAPABILITY_REGISTER.md) · [Release Baseline v2.4](../releases/RELEASE_BASELINE_v2.4.md)
-- WP-2.5 artifacts: [Release Baseline v2.5](../releases/RELEASE_BASELINE_v2.5.md) · [Implementation Report](../implementation/WP-2.5_IMPLEMENTATION_REPORT.md) · [Closeout](../implementation/WP-2.5_REPOSITORY_CLOSEOUT.md) · [Deferred](../implementation/WP-2.5_DEFERRED_CAPABILITY_REGISTER.md)
-- WP-3.1 artifacts: [Implementation Report](../implementation/WP-3.1_IMPLEMENTATION_REPORT.md) · [Closeout](../implementation/WP-3.1_REPOSITORY_CLOSEOUT.md) · [Git Readiness](../implementation/WP-3.1_GIT_READINESS_REVIEW.md) · [Deferred](../implementation/WP-3.1_DEFERRED_CAPABILITY_REGISTER.md)
+- **WP-1.1–WP-3.1 complete** (Release Baseline **v3.1** released) · **WP-3.2 Implemented** (Classification & Designation — `@ati/classification`; Self Review pending)
+- **Identity lock:** WP-2.5 = Requirement Intelligence Engine Foundation · WP-3.1 = Intake Entry Workflow · WP-3.2 = Classification & Designation ([WP Identity Decision](../implementation/WP_IDENTITY_ARCHITECTURE_DECISION.md))
+- WP-2.5 artifacts: [Release Baseline v2.5](../releases/RELEASE_BASELINE_v2.5.md) · [Implementation Report](../implementation/WP-2.5_IMPLEMENTATION_REPORT.md) · [Deferred](../implementation/WP-2.5_DEFERRED_CAPABILITY_REGISTER.md)
+- WP-3.1 artifacts: [Release Baseline v3.1](../releases/RELEASE_BASELINE_v3.1.md) · [Implementation Report](../implementation/WP-3.1_IMPLEMENTATION_REPORT.md) · [Closeout](../implementation/WP-3.1_REPOSITORY_CLOSEOUT.md) · [Deferred](../implementation/WP-3.1_DEFERRED_CAPABILITY_REGISTER.md)
+- WP-3.2 artifacts: [Implementation Report](../implementation/WP-3.2_IMPLEMENTATION_REPORT.md) · [Deferred](../implementation/WP-3.2_DEFERRED_CAPABILITY_REGISTER.md) · [Authorization](../implementation/WP-3.2_IMPLEMENTATION_AUTHORIZATION.md) · [Final Plan](../implementation/WP-3.2_FINAL_PRE_IMPLEMENTATION_PLAN.md) · [Architecture Review](../implementation/WP-3.2_ARCHITECTURE_REVIEW.md) · [Roadmap Sync](../implementation/WP-3.2_ROADMAP_SYNCHRONIZATION_REPORT.md)
 
 ## Phase 1b — Platform Spine (implementation in progress)
 
@@ -146,7 +146,8 @@ This roadmap is intentional sequencing for a 5–10 year platform. It does **not
 - [x] Observability baseline — WP-2.3
 - [x] Tenancy / workspace context baseline — WP-2.4
 - [x] Requirement Intelligence Engine Foundation — WP-2.5 (Released — Baseline v2.5)
-- [x] Intake Entry Workflow — WP-3.1 (`@ati/intake`; closed; Release Baseline v3.1 pending)
+- [x] Intake Entry Workflow — WP-3.1 (`@ati/intake`; Released — Baseline v3.1)
+- [x] Classification & Designation — WP-3.2 (`@ati/classification`; Implemented — Self Review pending)
 - Detailed WBS: [IMPLEMENTATION_ROADMAP_AND_WBS.md](../implementation/IMPLEMENTATION_ROADMAP_AND_WBS.md)
 
 ## Phase 2 — Reasoning Engine Implementation

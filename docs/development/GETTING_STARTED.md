@@ -98,7 +98,15 @@ Non-authoritative client headers (never used as authority): `x-ati-tenant-id`, `
 |----------|------|-------|
 | `ATI_INTAKE_ENABLED` | both | Default true; disables workflow when false |
 
-Package **`@ati/intake`**. See [WP-3.1 Implementation Authorization](../implementation/WP-3.1_IMPLEMENTATION_AUTHORIZATION.md) · [Implementation Report](../implementation/WP-3.1_IMPLEMENTATION_REPORT.md).
+Package **`@ati/intake`**. See [Release Baseline v3.1](../releases/RELEASE_BASELINE_v3.1.md) · [WP-3.1 Implementation Report](../implementation/WP-3.1_IMPLEMENTATION_REPORT.md).
+
+### WP-3.2 — Classification & Designation
+
+| Variable | Host | Notes |
+|----------|------|-------|
+| `ATI_CLASSIFICATION_ENABLED` | both | Default true; disables evaluate when false |
+
+Package **`@ati/classification`**. See [WP-3.2 Implementation Report](../implementation/WP-3.2_IMPLEMENTATION_REPORT.md) · [Deferred Register](../implementation/WP-3.2_DEFERRED_CAPABILITY_REGISTER.md).
 
 ### WP-2.3 documentation
 

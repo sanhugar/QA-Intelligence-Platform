@@ -5,6 +5,7 @@ import { AuthModule } from './auth/auth.module';
 import { ContextModule } from './context/context.module';
 import { RequirementEngineModule } from './requirement-engine/requirement-engine.module';
 import { IntakeModule } from './intake/intake.module';
+import { ClassificationModule } from './classification/classification.module';
 
 /**
  * API host root module.
@@ -12,6 +13,7 @@ import { IntakeModule } from './intake/intake.module';
  * Observability (correlation) → Auth → Context.
  * WP-2.5: RequirementEngineModule is harness-only (no HTTP middleware).
  * WP-3.1: IntakeModule is harness-only (no HTTP controllers).
+ * WP-3.2: ClassificationModule is harness-only (no HTTP controllers).
  */
 @Module({
   imports: [
@@ -21,6 +23,7 @@ import { IntakeModule } from './intake/intake.module';
     ContextModule,
     RequirementEngineModule,
     IntakeModule,
+    ClassificationModule,
   ],
 })
 export class AppModule {}
