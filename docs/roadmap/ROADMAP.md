@@ -129,8 +129,8 @@ This roadmap is intentional sequencing for a 5–10 year platform. It does **not
 - Canonical WBS / build order: [IMPLEMENTATION_ROADMAP_AND_WBS.md](../implementation/IMPLEMENTATION_ROADMAP_AND_WBS.md)
 - Work Package SOP: [IMPLEMENTATION_WORKFLOW.md](../development/IMPLEMENTATION_WORKFLOW.md)
 - Organizes Phases 1–10 (Spine → Production readiness); does **not** redesign architecture
-- **WP-1.1–WP-2.1 complete** (Independent Architecture Review approved for WP-2.1) · **WP-2.2 not started**
-- WP-2.1 artifacts: [Implementation Report](../implementation/WP-2.1_IMPLEMENTATION_REPORT.md) · [Closeout](../implementation/WP-2.1_CLOSEOUT_REPORT.md) · [Deferred](../implementation/WP-2.1_DEFERRED_CAPABILITY_REGISTER.md) · [Final Plan](../implementation/WP-2.1_FINAL_PRE_IMPLEMENTATION_PLAN.md)
+- **WP-1.1–WP-2.3 complete** (WP-2.3 Independent Architecture Review APPROVED WITH OBSERVATIONS; closed) · **WP-2.4 not started**
+- WP-2.3 artifacts: [Implementation Report](../implementation/WP-2.3_IMPLEMENTATION_REPORT.md) · [Closeout](../implementation/WP-2.3_REPOSITORY_CLOSEOUT.md) · [Deferred](../implementation/WP-2.3_DEFERRED_CAPABILITY_REGISTER.md) · [Independent Review](../implementation/WP-2.3_INDEPENDENT_ARCHITECTURE_REVIEW.md)
 
 ## Phase 1b — Platform Spine (implementation in progress)
 
@@ -139,7 +139,9 @@ This roadmap is intentional sequencing for a 5–10 year platform. It does **not
 - [x] Spine shared service shell — WP-1.3
 - [x] AI runtime host shell — WP-1.4
 - [x] Shared packages baseline (Foundation `@ati/*`) — WP-2.1
-- AuthN/AuthZ baseline (OIDC), observability baseline, Knowledge Intake — later Phase 1/2 WPs
+- [x] AuthN/AuthZ baseline (OIDC foundation) — WP-2.2
+- [x] Observability baseline — WP-2.3
+- Knowledge Intake — later Phase 1/2 WPs
 - Detailed WBS: [IMPLEMENTATION_ROADMAP_AND_WBS.md](../implementation/IMPLEMENTATION_ROADMAP_AND_WBS.md)
 
 ## Phase 2 — Reasoning Engine Implementation

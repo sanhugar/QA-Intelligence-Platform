@@ -155,9 +155,12 @@ Work packages are implementation packages — not task-level tickets. No APIs/sc
 | Field | Content |
 |-------|---------|
 | **Purpose** | AuthN/AuthZ baseline (OIDC) and request identity context |
-| **Dependencies** | WP-1.1; Security Architecture consumption |
+| **Dependencies** | WP-1.1; Security Architecture consumption; WP-2.1 |
 | **Expected outcomes** | Authenticated access to protected host surfaces |
 | **Completion criteria** | Unauthenticated access denied where required; no AI Approval bypass |
+| **Implementation status** | **Complete** — Delta Verification v2 verified — closed |
+| **Artifacts** | [WP-2.2_IMPLEMENTATION_REPORT.md](./WP-2.2_IMPLEMENTATION_REPORT.md) · [WP-2.2_DEFERRED_CAPABILITY_REGISTER.md](./WP-2.2_DEFERRED_CAPABILITY_REGISTER.md) · [WP-2.2_MANDATORY_REMEDIATION_IMPLEMENTATION_REPORT.md](./WP-2.2_MANDATORY_REMEDIATION_IMPLEMENTATION_REPORT.md) · [WP-2.2_REPOSITORY_CLOSEOUT.md](./WP-2.2_REPOSITORY_CLOSEOUT.md) |
+| **Process** | [IMPLEMENTATION_WORKFLOW.md](../development/IMPLEMENTATION_WORKFLOW.md) |
 
 #### WP-2.3 Observability Baseline
 
@@ -167,6 +170,9 @@ Work packages are implementation packages — not task-level tickets. No APIs/sc
 | **Dependencies** | WP-1.3, WP-2.1 |
 | **Expected outcomes** | Correlated logs across api/worker; failure classes visible |
 | **Completion criteria** | Ops can diagnose boot/runtime failures without Domain features |
+| **Implementation status** | **Complete** — Independent Architecture Review APPROVED WITH OBSERVATIONS — closed |
+| **Artifacts** | [WP-2.3_IMPLEMENTATION_REPORT.md](./WP-2.3_IMPLEMENTATION_REPORT.md) · [WP-2.3_DEFERRED_CAPABILITY_REGISTER.md](./WP-2.3_DEFERRED_CAPABILITY_REGISTER.md) · [WP-2.3_REPOSITORY_CLOSEOUT.md](./WP-2.3_REPOSITORY_CLOSEOUT.md) · [WP-2.3_INDEPENDENT_ARCHITECTURE_REVIEW.md](./WP-2.3_INDEPENDENT_ARCHITECTURE_REVIEW.md) |
+| **Process** | [IMPLEMENTATION_WORKFLOW.md](../development/IMPLEMENTATION_WORKFLOW.md) |
 
 #### WP-2.4 Tenancy / Workspace Context Baseline
 

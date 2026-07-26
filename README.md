@@ -11,8 +11,9 @@ Enterprise AI QA Knowledge Platform.
 - See [docs/architecture/ARCHITECTURE_BASELINE_STATUS.md](docs/architecture/ARCHITECTURE_BASELINE_STATUS.md).
 - ADRs 0001–0015 are the approved development baseline — no redesign via implementation.
 - Execution follows [docs/implementation/IMPLEMENTATION_ROADMAP_AND_WBS.md](docs/implementation/IMPLEMENTATION_ROADMAP_AND_WBS.md).
-- **WP-1.1–WP-2.1 complete** (Independent Architecture Review approved for WP-2.1). **WP-2.2 not started.**
-- WP-2.1: [Implementation Report](docs/implementation/WP-2.1_IMPLEMENTATION_REPORT.md) · [Closeout](docs/implementation/WP-2.1_CLOSEOUT_REPORT.md) · [Deferred](docs/implementation/WP-2.1_DEFERRED_CAPABILITY_REGISTER.md) · [Final Plan](docs/implementation/WP-2.1_FINAL_PRE_IMPLEMENTATION_PLAN.md) · [Packages](packages/README.md) · Workflow: [IMPLEMENTATION_WORKFLOW.md](docs/development/IMPLEMENTATION_WORKFLOW.md)
+- **WP-1.1–WP-2.3 complete** (WP-2.3 Independent Architecture Review APPROVED WITH OBSERVATIONS; closed). **WP-2.4 implemented** (Self Review / Independent Review pending).
+- WP-2.4: [Implementation Report](docs/implementation/WP-2.4_IMPLEMENTATION_REPORT.md) · [Deferred](docs/implementation/WP-2.4_DEFERRED_CAPABILITY_REGISTER.md) · [`@ati/context`](packages/context/README.md) · Workflow: [IMPLEMENTATION_WORKFLOW.md](docs/development/IMPLEMENTATION_WORKFLOW.md)
+- WP-2.3: [Implementation Report](docs/implementation/WP-2.3_IMPLEMENTATION_REPORT.md) · [Closeout](docs/implementation/WP-2.3_REPOSITORY_CLOSEOUT.md) · [Deferred](docs/implementation/WP-2.3_DEFERRED_CAPABILITY_REGISTER.md) · [Independent Review](docs/implementation/WP-2.3_INDEPENDENT_ARCHITECTURE_REVIEW.md) · [`@ati/observability`](packages/observability/README.md)
 
 ## Start Here
 
@@ -36,10 +37,17 @@ Enterprise AI QA Knowledge Platform.
 | [docs/implementation/README.md](docs/implementation/README.md) | Implementation / WP reports index |
 | [docs/implementation/WP-1.2_IMPLEMENTATION_REPORT.md](docs/implementation/WP-1.2_IMPLEMENTATION_REPORT.md) | WP-1.2 implementation report |
 | [docs/implementation/WP-1.2_DEFERRED_CAPABILITY_REGISTER.md](docs/implementation/WP-1.2_DEFERRED_CAPABILITY_REGISTER.md) | WP-1.2 deferred capabilities |
-| [docs/implementation/WP-2.1_IMPLEMENTATION_REPORT.md](docs/implementation/WP-2.1_IMPLEMENTATION_REPORT.md) | WP-2.1 implementation report |
-| [docs/implementation/WP-2.1_DEFERRED_CAPABILITY_REGISTER.md](docs/implementation/WP-2.1_DEFERRED_CAPABILITY_REGISTER.md) | WP-2.1 deferred capabilities |
-| [docs/implementation/WP-2.1_CLOSEOUT_REPORT.md](docs/implementation/WP-2.1_CLOSEOUT_REPORT.md) | WP-2.1 closeout report |
-| [docs/implementation/WP-2.1_FINAL_PRE_IMPLEMENTATION_PLAN.md](docs/implementation/WP-2.1_FINAL_PRE_IMPLEMENTATION_PLAN.md) | WP-2.1 archived Final Pre-Implementation Plan |
+| [docs/implementation/WP-2.2_IMPLEMENTATION_REPORT.md](docs/implementation/WP-2.2_IMPLEMENTATION_REPORT.md) | WP-2.2 implementation report |
+| [docs/implementation/WP-2.2_DEFERRED_CAPABILITY_REGISTER.md](docs/implementation/WP-2.2_DEFERRED_CAPABILITY_REGISTER.md) | WP-2.2 deferred capabilities |
+| [docs/implementation/WP-2.3_IMPLEMENTATION_REPORT.md](docs/implementation/WP-2.3_IMPLEMENTATION_REPORT.md) | WP-2.3 implementation report |
+| [docs/implementation/WP-2.3_DEFERRED_CAPABILITY_REGISTER.md](docs/implementation/WP-2.3_DEFERRED_CAPABILITY_REGISTER.md) | WP-2.3 deferred capabilities |
+| [docs/implementation/WP-2.3_REPOSITORY_CLOSEOUT.md](docs/implementation/WP-2.3_REPOSITORY_CLOSEOUT.md) | WP-2.3 repository closeout |
+| [docs/implementation/WP-2.4_IMPLEMENTATION_REPORT.md](docs/implementation/WP-2.4_IMPLEMENTATION_REPORT.md) | WP-2.4 implementation report |
+| [docs/implementation/WP-2.4_DEFERRED_CAPABILITY_REGISTER.md](docs/implementation/WP-2.4_DEFERRED_CAPABILITY_REGISTER.md) | WP-2.4 deferred capabilities |
+| [docs/implementation/WP-2.2_MANDATORY_REMEDIATION_IMPLEMENTATION_REPORT.md](docs/implementation/WP-2.2_MANDATORY_REMEDIATION_IMPLEMENTATION_REPORT.md) | WP-2.2 mandatory remediation |
+| [docs/implementation/WP-2.2_REPOSITORY_CLOSEOUT.md](docs/implementation/WP-2.2_REPOSITORY_CLOSEOUT.md) | WP-2.2 repository closeout |
+| [packages/auth/README.md](packages/auth/README.md) | `@ati/auth` package |
+| [packages/context/README.md](packages/context/README.md) | `@ati/context` package |
 | [packages/README.md](packages/README.md) | Foundation shared packages index |
 | [docs/development/README.md](docs/development/README.md) | Development documentation index |
 | [docs/engineering/REQUIREMENT_UNDERSTANDING_ENGINE_SPECIFICATION.md](docs/engineering/REQUIREMENT_UNDERSTANDING_ENGINE_SPECIFICATION.md) | Requirement Understanding Engine eng spec (no code) |

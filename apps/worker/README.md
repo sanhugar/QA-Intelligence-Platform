@@ -2,7 +2,7 @@
 
 NestJS background host for the ATI platform (execution-primary for AI Runtime).
 
-**Status:** WP-1.1–WP-2.1 (**complete** — Independent Architecture Review approved; consumes Foundation `@ati/*` packages)
+**Status:** WP-1.1–WP-2.3 (**complete** — service-principal auth + Observability baseline; Spine unchanged; no job processors)
 
 ## Run
 

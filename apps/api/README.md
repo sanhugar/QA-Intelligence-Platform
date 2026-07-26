@@ -2,7 +2,7 @@
 
 NestJS HTTP API host for the ATI modular monolith.
 
-**Status:** WP-1.1–WP-2.1 (**complete** — Independent Architecture Review approved; consumes Foundation `@ati/*` packages)
+**Status:** WP-1.1–WP-2.3 (**complete** — AuthN/AuthZ + Observability baseline; Spine unchanged)
 
 ## Run
 

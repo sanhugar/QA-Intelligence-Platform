@@ -67,10 +67,55 @@ Executable planning, Work Package reports, and deferred-capability registers.
 | [WP-2.1_CLOSEOUT_REPORT.md](./WP-2.1_CLOSEOUT_REPORT.md) | Project closeout report (Independent Review approved) |
 | [../../packages/README.md](../../packages/README.md) | Foundation packages index |
 
-**Status:** Complete — Independent Architecture Review approved — closed. **WP-2.2 not started.**
+**Status:** Complete — Independent Architecture Review approved — closed.
+
+## WP-2.2 — Authentication & Authorization Foundation
+
+| Document | Purpose |
+|----------|---------|
+| [WP-2.2_IMPLEMENTATION_REPORT.md](./WP-2.2_IMPLEMENTATION_REPORT.md) | Implementation report (incl. mandatory remediation) |
+| [WP-2.2_DEFERRED_CAPABILITY_REGISTER.md](./WP-2.2_DEFERRED_CAPABILITY_REGISTER.md) | Deferred capabilities |
+| [WP-2.2_MANDATORY_REMEDIATION_IMPLEMENTATION_REPORT.md](./WP-2.2_MANDATORY_REMEDIATION_IMPLEMENTATION_REPORT.md) | Mandatory remediation delivery |
+| [WP-2.2_REPOSITORY_CLOSEOUT.md](./WP-2.2_REPOSITORY_CLOSEOUT.md) | Repository closeout |
+| [../../packages/auth/README.md](../../packages/auth/README.md) | `@ati/auth` package |
+
+**Status:** Complete — Delta Verification v2 verified — closed.
+
+## WP-2.3 — Observability Baseline
+
+| Document | Purpose |
+|----------|---------|
+| [WP-2.3_PRE_IMPLEMENTATION_PLAN.md](./WP-2.3_PRE_IMPLEMENTATION_PLAN.md) | Pre-implementation plan |
+| [WP-2.3_ARCHITECTURE_REVIEW.md](./WP-2.3_ARCHITECTURE_REVIEW.md) | Architecture review |
+| [WP-2.3_ARCHITECTURE_DECISION_RESOLUTION.md](./WP-2.3_ARCHITECTURE_DECISION_RESOLUTION.md) | Decision resolution |
+| [WP-2.3_FINAL_PRE_IMPLEMENTATION_PLAN.md](./WP-2.3_FINAL_PRE_IMPLEMENTATION_PLAN.md) | Final pre-implementation plan |
+| [WP-2.3_IMPLEMENTATION_AUTHORIZATION.md](./WP-2.3_IMPLEMENTATION_AUTHORIZATION.md) | Implementation authorization |
+| [WP-2.3_IMPLEMENTATION_REPORT.md](./WP-2.3_IMPLEMENTATION_REPORT.md) | Implementation report |
+| [WP-2.3_DEFERRED_CAPABILITY_REGISTER.md](./WP-2.3_DEFERRED_CAPABILITY_REGISTER.md) | Deferred capabilities |
+| [WP-2.3_SELF_REVIEW.md](./WP-2.3_SELF_REVIEW.md) | Self review |
+| [WP-2.3_INDEPENDENT_ARCHITECTURE_REVIEW.md](./WP-2.3_INDEPENDENT_ARCHITECTURE_REVIEW.md) | Independent architecture review |
+| [WP-2.3_REPOSITORY_CLOSEOUT.md](./WP-2.3_REPOSITORY_CLOSEOUT.md) | Repository closeout |
+| [../../packages/observability/README.md](../../packages/observability/README.md) | `@ati/observability` package |
+
+**Status:** Complete — Independent Architecture Review APPROVED WITH OBSERVATIONS — closed.
+
+## WP-2.4 — Tenancy / Workspace Context Baseline
+
+| Document | Purpose |
+|----------|---------|
+| [WP-2.4_PRE_IMPLEMENTATION_PLAN.md](./WP-2.4_PRE_IMPLEMENTATION_PLAN.md) | Pre-implementation plan |
+| [WP-2.4_ARCHITECTURE_REVIEW.md](./WP-2.4_ARCHITECTURE_REVIEW.md) | Architecture review |
+| [WP-2.4_ARCHITECTURE_DECISION_RESOLUTION.md](./WP-2.4_ARCHITECTURE_DECISION_RESOLUTION.md) | Decision resolution |
+| [WP-2.4_FINAL_PRE_IMPLEMENTATION_PLAN.md](./WP-2.4_FINAL_PRE_IMPLEMENTATION_PLAN.md) | Final pre-implementation plan |
+| [WP-2.4_IMPLEMENTATION_AUTHORIZATION.md](./WP-2.4_IMPLEMENTATION_AUTHORIZATION.md) | Implementation authorization |
+| [WP-2.4_IMPLEMENTATION_REPORT.md](./WP-2.4_IMPLEMENTATION_REPORT.md) | Implementation report |
+| [WP-2.4_DEFERRED_CAPABILITY_REGISTER.md](./WP-2.4_DEFERRED_CAPABILITY_REGISTER.md) | Deferred capabilities |
+| [../../packages/context/README.md](../../packages/context/README.md) | `@ati/context` package |
+
+**Status:** Implementation complete — Self Review / Independent Review pending.
 
 ## Next
 
 | Work Package | Status |
 |--------------|--------|
-| WP-2.2 Identity & Access Baseline | Not started (requires separate authorization) |
+| WP-2.4 Tenancy / Workspace Context Baseline | Implemented (governance closeout pending) |
