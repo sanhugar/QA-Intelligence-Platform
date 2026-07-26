@@ -81,8 +81,8 @@ export class PlatformStartupCoordinator {
         this.registry.updateLifecycle(moduleId, 'READY');
       }
 
+      // Registration phase complete. Platform READY is owned by WP-1.3 host bootstrap.
       this.registry.setStartupState('READY');
-      platformReadiness.setReady(true);
 
       this.lastReport = this.buildReport({
         startedAt,
@@ -92,9 +92,9 @@ export class PlatformStartupCoordinator {
       });
       log.log(
         JSON.stringify({
-          message: 'Platform startup complete',
+          message: 'Module registration complete',
           host: this.options.host,
-          platformReady: true,
+          registrationReady: true,
           registeredCount: this.lastReport.registeredModules.length,
           registrationOrder: this.lastReport.registrationOrder,
         }),

@@ -33,10 +33,21 @@ Executable planning, Work Package reports, and deferred-capability registers.
 | [../engineering/PLATFORM_REGISTRATION_DEPENDENCY_MATRIX.md](../engineering/PLATFORM_REGISTRATION_DEPENDENCY_MATRIX.md) | Bootstrap registration matrix |
 | [../engineering/PLATFORM_SPINE_WP-1.2.md](../engineering/PLATFORM_SPINE_WP-1.2.md) | Spine delivery note |
 
-**Status:** Complete — Independent Architecture Review approved — closed for Git commit. **WP-1.3 not started.**
+**Status:** Complete — Independent Architecture Review approved — closed.
+
+## WP-1.3 — Spine Shared Service Shell
+
+| Document | Purpose |
+|----------|---------|
+| [WP-1.3_IMPLEMENTATION_REPORT.md](./WP-1.3_IMPLEMENTATION_REPORT.md) | Implementation report |
+| [WP-1.3_DEFERRED_CAPABILITY_REGISTER.md](./WP-1.3_DEFERRED_CAPABILITY_REGISTER.md) | Deferred capabilities |
+| [WP-1.3_CLOSEOUT_REPORT.md](./WP-1.3_CLOSEOUT_REPORT.md) | Project closeout report (Independent Review approved) |
+| [../engineering/PLATFORM_SPINE_WP-1.3.md](../engineering/PLATFORM_SPINE_WP-1.3.md) | Spine delivery note |
+
+**Status:** Complete — Independent Architecture Review approved — closed for Git commit. **WP-1.4 not started.**
 
 ## Next
 
 | Work Package | Status |
 |--------------|--------|
-| WP-1.3 Spine Shared Service Shell | Not started (requires separate authorization) |
+| WP-1.4 AI Runtime Host Shell | Not started (requires separate authorization) |

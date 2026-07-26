@@ -21,7 +21,6 @@ describe('PlatformStartupCoordinator', () => {
 
     const report = await coordinator.start();
 
-    expect(report.platformReady).toBe(true);
     expect(report.startupState).toBe('READY');
     expect(report.registeredModules).toHaveLength(17);
     expect(report.registrationOrder).toEqual([
@@ -43,7 +42,8 @@ describe('PlatformStartupCoordinator', () => {
       'workflow-orchestration',
       'integration-facade',
     ]);
-    expect(platformReadiness.isReady()).toBe(true);
+    // Platform READY is owned by WP-1.3 host bootstrap, not registration alone.
+    expect(platformReadiness.isReady()).toBe(false);
     expect(coordinator.getRegistry().extensions.totalCount()).toBe(0);
   });
 

@@ -118,7 +118,9 @@ Work packages are implementation packages — not task-level tickets. No APIs/sc
 | **Dependencies** | WP-1.1 (registration from WP-1.2 recommended before shared-service consumers) |
 | **Expected outcomes** | Shared services available to modules without Domain logic |
 | **Completion criteria** | Spine eng spec shell responsibilities met; independently testable |
-| **Implementation status** | **Not started** — do not begin until separately authorized |
+| **Implementation status** | **Complete** — Independent Architecture Review approved — closed |
+| **Artifacts** | [WP-1.3_IMPLEMENTATION_REPORT.md](./WP-1.3_IMPLEMENTATION_REPORT.md) · [WP-1.3_DEFERRED_CAPABILITY_REGISTER.md](./WP-1.3_DEFERRED_CAPABILITY_REGISTER.md) · [WP-1.3_CLOSEOUT_REPORT.md](./WP-1.3_CLOSEOUT_REPORT.md) · [PLATFORM_SPINE_WP-1.3.md](../engineering/PLATFORM_SPINE_WP-1.3.md) |
+| **Process** | [IMPLEMENTATION_WORKFLOW.md](../development/IMPLEMENTATION_WORKFLOW.md) |
 
 #### WP-1.4 AI Runtime Host Shell
 
@@ -128,6 +130,7 @@ Work packages are implementation packages — not task-level tickets. No APIs/sc
 | **Dependencies** | WP-1.2, WP-1.3 |
 | **Expected outcomes** | Engine manifest registration path; invocation envelope ready |
 | **Completion criteria** | Can run a no-op/stub engine under host rules without provider binding in core |
+| **Implementation status** | **Not started** — do not begin until separately authorized |
 
 ---
 
