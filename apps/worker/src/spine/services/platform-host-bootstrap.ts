@@ -1,4 +1,6 @@
 import { applicationModuleShells } from '../../modules/module-shell-catalog';
+import { AiRuntimeHost } from '../ai-runtime/ai-runtime-host';
+import { AiRuntimeError } from '../ai-runtime/types';
 import { PlatformStartupCoordinator } from '../registration/platform-startup-coordinator';
 import { platformReadiness } from '../registration/platform-readiness';
 import { AuditSupportService } from './audit/audit-support.service';
@@ -18,13 +20,15 @@ export interface PlatformHostBootstrapOptions {
 
 export interface PlatformHostBootstrapResult {
   registry: SharedServiceRegistry;
+  aiRuntimeHost: AiRuntimeHost;
   port: number;
 }
 
 /**
- * Mandatory WP-1.3 boot sequence:
+ * Mandatory WP-1.4 boot sequence:
  * Configuration → Logger → Module Registration → Shared Service Registry →
- * Diagnostics → Feature Flags → Audit Support → Event Publisher → Scheduler → Platform READY
+ * Diagnostics → Feature Flags → Audit Support → Event Publisher → Scheduler →
+ * Platform AI Runtime Host → Platform READY
  */
 export class PlatformHostBootstrap {
   async start(options: PlatformHostBootstrapOptions): Promise<PlatformHostBootstrapResult> {
@@ -126,14 +130,37 @@ export class PlatformHostBootstrap {
           );
     }
 
-    // 10. Platform READY
+    // 10. Platform AI Runtime Host (register only — no invoke)
+    const aiRuntimeHost = new AiRuntimeHost();
+    try {
+      aiRuntimeHost.initialize(registration.getRegistry().extensions);
+      aiRuntimeHost.registerPlatformNoop();
+      logger.info('Platform AI Runtime Host initialized', {
+        host: options.host,
+        registeredEngines: aiRuntimeHost.listManifests().map((m) => m.engineId),
+      });
+    } catch (error) {
+      platformReadiness.setReady(false);
+      logger.error('AI Runtime Host initialization failed', {
+        error: error instanceof Error ? error.message : String(error),
+      });
+      throw error instanceof AiRuntimeError
+        ? error
+        : new AiRuntimeError(
+            error instanceof Error ? error.message : String(error),
+            'AI_RUNTIME_INIT_FAILED',
+          );
+    }
+
+    // 11. Platform READY
     platformReadiness.setReady(true);
     logger.info('Platform READY', {
       host: options.host,
       registeredModules: registration.getStartupReport().registeredModules.length,
+      aiEngines: aiRuntimeHost.listManifests().length,
       port: config.port,
     });
 
-    return { registry, port: config.port };
+    return { registry, aiRuntimeHost, port: config.port };
   }
 }

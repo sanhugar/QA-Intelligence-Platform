@@ -6,7 +6,7 @@
 - pnpm 9+
 - Git
 
-Docker / Postgres / Redis are **not** required for WP-1.1–WP-1.3 host bootstraps.
+Docker / Postgres / Redis are **not** required for WP-1.1–WP-1.4 host bootstraps.
 
 ## Install
 
@@ -46,11 +46,12 @@ pnpm typecheck
 
 ## Current phase
 
-**WP-1.1 + WP-1.2 + WP-1.3 complete** (Independent Architecture Review approved for WP-1.3). WP-1.4 is not started.
+**WP-1.1–WP-1.4 complete** (Independent Architecture Review approved for WP-1.4). WP-2.x is not started.
 
 ### What runs today
 
-- On boot, `api` and `worker` run the mandatory Platform Spine sequence: Configuration → Logger → Module Registration → Shared Service Registry → Diagnostics → Feature Flags → Audit Support → Event Publisher → Scheduler → Platform READY.
+- On boot, `api` and `worker` run the mandatory Platform Spine sequence: Configuration → Logger → Module Registration → Shared Service Registry → Diagnostics → Feature Flags → Audit Support → Event Publisher → Scheduler → Platform AI Runtime Host → Platform READY.
+- AI Runtime registers `platform-noop` only (no boot-time invoke; no REST execute API).
 - Readiness (`/health/ready`) is OK only after the full sequence (boolean only; no service/module details in health responses).
 
 ### Useful environment keys
@@ -64,13 +65,13 @@ pnpm typecheck
 | `ATI_PLATFORM_VERSION` | both | Default `0.0.0` |
 | `ATI_FEATURE_FLAGS` | both | `key=true,other=false` |
 
-### WP-1.3 documentation
+### WP-1.4 documentation
 
 | Document | Link |
 |----------|------|
 | Implementation Workflow (SOP) | [IMPLEMENTATION_WORKFLOW.md](./IMPLEMENTATION_WORKFLOW.md) |
-| Implementation report | [WP-1.3_IMPLEMENTATION_REPORT.md](../implementation/WP-1.3_IMPLEMENTATION_REPORT.md) |
-| Deferred capabilities | [WP-1.3_DEFERRED_CAPABILITY_REGISTER.md](../implementation/WP-1.3_DEFERRED_CAPABILITY_REGISTER.md) |
-| Closeout report | [WP-1.3_CLOSEOUT_REPORT.md](../implementation/WP-1.3_CLOSEOUT_REPORT.md) |
-| Spine delivery note | [PLATFORM_SPINE_WP-1.3.md](../engineering/PLATFORM_SPINE_WP-1.3.md) |
+| Implementation report | [WP-1.4_IMPLEMENTATION_REPORT.md](../implementation/WP-1.4_IMPLEMENTATION_REPORT.md) |
+| Deferred capabilities | [WP-1.4_DEFERRED_CAPABILITY_REGISTER.md](../implementation/WP-1.4_DEFERRED_CAPABILITY_REGISTER.md) |
+| Closeout report | [WP-1.4_CLOSEOUT_REPORT.md](../implementation/WP-1.4_CLOSEOUT_REPORT.md) |
+| Spine delivery note | [PLATFORM_SPINE_WP-1.4.md](../engineering/PLATFORM_SPINE_WP-1.4.md) |
 | Implementation index | [../implementation/README.md](../implementation/README.md) |

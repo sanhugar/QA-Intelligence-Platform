@@ -130,7 +130,9 @@ Work packages are implementation packages — not task-level tickets. No APIs/sc
 | **Dependencies** | WP-1.2, WP-1.3 |
 | **Expected outcomes** | Engine manifest registration path; invocation envelope ready |
 | **Completion criteria** | Can run a no-op/stub engine under host rules without provider binding in core |
-| **Implementation status** | **Not started** — do not begin until separately authorized |
+| **Implementation status** | **Complete** — Independent Architecture Review approved — closed |
+| **Artifacts** | [WP-1.4_IMPLEMENTATION_REPORT.md](./WP-1.4_IMPLEMENTATION_REPORT.md) · [WP-1.4_DEFERRED_CAPABILITY_REGISTER.md](./WP-1.4_DEFERRED_CAPABILITY_REGISTER.md) · [WP-1.4_CLOSEOUT_REPORT.md](./WP-1.4_CLOSEOUT_REPORT.md) · [PLATFORM_SPINE_WP-1.4.md](../engineering/PLATFORM_SPINE_WP-1.4.md) |
+| **Process** | [IMPLEMENTATION_WORKFLOW.md](../development/IMPLEMENTATION_WORKFLOW.md) |
 
 ---
 
@@ -144,6 +146,7 @@ Work packages are implementation packages — not task-level tickets. No APIs/sc
 | **Dependencies** | WP-1.1 |
 | **Expected outcomes** | Apps consume shared packages; no Domain leakage into UI |
 | **Completion criteria** | Package boundaries match Application Architecture; tests for shared utilities |
+| **Implementation status** | **Not started** — do not begin until separately authorized |
 
 #### WP-2.2 Identity & Access Baseline
 

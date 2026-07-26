@@ -10,6 +10,7 @@ Engineering specifications and delivery notes for ATI. These consume the frozen 
 | [PLATFORM_REGISTRATION_DEPENDENCY_MATRIX.md](./PLATFORM_REGISTRATION_DEPENDENCY_MATRIX.md) | Bootstrap-only registration dependencies (WP-1.2) |
 | [PLATFORM_SPINE_WP-1.2.md](./PLATFORM_SPINE_WP-1.2.md) | WP-1.2 Spine delivery note |
 | [PLATFORM_SPINE_WP-1.3.md](./PLATFORM_SPINE_WP-1.3.md) | WP-1.3 Spine delivery note |
+| [PLATFORM_SPINE_WP-1.4.md](./PLATFORM_SPINE_WP-1.4.md) | WP-1.4 Spine delivery note |
 
 ## Cross-cutting AI engineering
 
